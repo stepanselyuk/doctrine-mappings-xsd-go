@@ -12,11 +12,11 @@ import (
 )
 
 type XsdGoPkgHasAttr_IndexBy_XsdtNmtoken_ struct {
-	IndexBy xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping index-by,attr"`
+	IndexBy xsdt.Nmtoken `xml:"index-by,attr"`
 }
 
 type XsdGoPkgHasAttr_OrphanRemoval_XsdtBoolean_False struct {
-	OrphanRemoval xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping orphan-removal,attr"`
+	OrphanRemoval xsdt.Boolean `xml:"orphan-removal,attr"`
 }
 
 //	Returns the default value for OrphanRemoval -- false
@@ -45,11 +45,11 @@ func (me TcacheUsageType) IsReadWrite() bool { return me.String() == "READ_WRITE
 func (me TcacheUsageType) IsNonstrictReadWrite() bool { return me.String() == "NONSTRICT_READ_WRITE" }
 
 type XsdGoPkgHasAttr_Usage_TcacheUsageType_ struct {
-	Usage TcacheUsageType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping usage,attr"`
+	Usage TcacheUsageType `xml:"usage,attr"`
 }
 
 type XsdGoPkgHasAttr_Region_XsdtString_ struct {
-	Region xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping region,attr"`
+	Region xsdt.String `xml:"region,attr"`
 }
 
 type Tcache struct {
@@ -76,7 +76,7 @@ func (me *Tcache) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_ struct {
-	Cache *Tcache `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cache"`
+	Cache *Tcache `xml:"cache"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_ instance.
@@ -100,7 +100,7 @@ func (me *XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_) Walk() (e
 }
 
 type XsdGoPkgHasAttr_Name_XsdtNmtoken_ struct {
-	Name xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping name,attr"`
+	Name xsdt.Nmtoken `xml:"name,attr"`
 }
 
 type TorderByDirection xsdt.Token
@@ -121,7 +121,7 @@ func (me TorderByDirection) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
 func (me TorderByDirection) IsAsc() bool { return me.String() == "ASC" }
 
 type XsdGoPkgHasAttr_Direction_TorderByDirection_Asc struct {
-	Direction TorderByDirection `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping direction,attr"`
+	Direction TorderByDirection `xml:"direction,attr"`
 }
 
 //	Returns the default value for Direction -- "ASC"
@@ -153,7 +153,7 @@ func (me *TorderByField) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ struct {
-	OrderByFields []*TorderByField `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping order-by-field"`
+	OrderByFields []*TorderByField `xml:"order-by-field"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ instance.
@@ -203,7 +203,7 @@ func (me *TorderBy) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ struct {
-	OrderBy *TorderBy `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping order-by"`
+	OrderBy *TorderBy `xml:"order-by"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ instance.
@@ -227,15 +227,15 @@ func (me *XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_) Wal
 }
 
 type XsdGoPkgHasAttr_MappedBy_XsdtNmtoken_ struct {
-	MappedBy xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping mapped-by,attr"`
+	MappedBy xsdt.Nmtoken `xml:"mapped-by,attr"`
 }
 
 type XsdGoPkgHasAttr_Field_XsdtNmtoken_ struct {
-	Field xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field,attr"`
+	Field xsdt.Nmtoken `xml:"field,attr"`
 }
 
 type XsdGoPkgHasAttr_InversedBy_XsdtNmtoken_ struct {
-	InversedBy xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping inversed-by,attr"`
+	InversedBy xsdt.Nmtoken `xml:"inversed-by,attr"`
 }
 
 type TfetchType xsdt.Token
@@ -259,7 +259,7 @@ func (me TfetchType) IsExtraLazy() bool { return me.String() == "EXTRA_LAZY" }
 func (me *TfetchType) Set(s string) { (*xsdt.Token)(me).Set(s) }
 
 type XsdGoPkgHasAttr_Fetch_TfetchType_Lazy struct {
-	Fetch TfetchType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping fetch,attr"`
+	Fetch TfetchType `xml:"fetch,attr"`
 }
 
 //	Returns the default value for Fetch -- "LAZY"
@@ -286,7 +286,7 @@ func (me *TemptyType) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ struct {
-	CascadeRemove *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-remove"`
+	CascadeRemove *TemptyType `xml:"cascade-remove"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ instance.
@@ -310,7 +310,7 @@ func (me *XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_T
 }
 
 type XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ struct {
-	CascadeRefresh *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-refresh"`
+	CascadeRefresh *TemptyType `xml:"cascade-refresh"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ instance.
@@ -334,7 +334,7 @@ func (me *XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh
 }
 
 type XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ struct {
-	CascadeDetach *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-detach"`
+	CascadeDetach *TemptyType `xml:"cascade-detach"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ instance.
@@ -358,7 +358,7 @@ func (me *XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_T
 }
 
 type XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ struct {
-	CascadeAll *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-all"`
+	CascadeAll *TemptyType `xml:"cascade-all"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ instance.
@@ -382,7 +382,7 @@ func (me *XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyT
 }
 
 type XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ struct {
-	CascadePersist *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-persist"`
+	CascadePersist *TemptyType `xml:"cascade-persist"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ instance.
@@ -406,7 +406,7 @@ func (me *XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist
 }
 
 type XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ struct {
-	CascadeMerge *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-merge"`
+	CascadeMerge *TemptyType `xml:"cascade-merge"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ instance.
@@ -479,7 +479,7 @@ func (me *TcascadeType) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_ struct {
-	Cascade *TcascadeType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade"`
+	Cascade *TcascadeType `xml:"cascade"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_ instance.
@@ -503,11 +503,11 @@ func (me *XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_)
 }
 
 type XsdGoPkgHasAttr_ColumnDefinition_XsdtString_ struct {
-	ColumnDefinition xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping column-definition,attr"`
+	ColumnDefinition xsdt.String `xml:"column-definition,attr"`
 }
 
 type XsdGoPkgHasAttr_ReferencedColumnName_XsdtNmtoken_Id struct {
-	ReferencedColumnName xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping referenced-column-name,attr"`
+	ReferencedColumnName xsdt.Nmtoken `xml:"referenced-column-name,attr"`
 }
 
 //	Returns the default value for ReferencedColumnName -- "id"
@@ -516,7 +516,7 @@ func (me XsdGoPkgHasAttr_ReferencedColumnName_XsdtNmtoken_Id) ReferencedColumnNa
 }
 
 type XsdGoPkgHasAttr_Unique_XsdtBoolean_False struct {
-	Unique xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping unique,attr"`
+	Unique xsdt.Boolean `xml:"unique,attr"`
 }
 
 //	Returns the default value for Unique -- false
@@ -525,7 +525,7 @@ func (me XsdGoPkgHasAttr_Unique_XsdtBoolean_False) UniqueDefault() xsdt.Boolean 
 }
 
 type XsdGoPkgHasAttr_Nullable_XsdtBoolean_True struct {
-	Nullable xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping nullable,attr"`
+	Nullable xsdt.Boolean `xml:"nullable,attr"`
 }
 
 //	Returns the default value for Nullable -- true
@@ -554,7 +554,7 @@ func (me TfkAction) IsCascade() bool { return me.String() == "CASCADE" }
 func (me TfkAction) IsRestrict() bool { return me.String() == "RESTRICT" }
 
 type XsdGoPkgHasAttr_OnDelete_TfkAction_ struct {
-	OnDelete TfkAction `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping on-delete,attr"`
+	OnDelete TfkAction `xml:"on-delete,attr"`
 }
 
 type TjoinColumn struct {
@@ -589,7 +589,7 @@ func (me *TjoinColumn) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_ struct {
-	JoinColumns []*TjoinColumn `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-column"`
+	JoinColumns []*TjoinColumn `xml:"join-column"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_ instance.
@@ -639,7 +639,7 @@ func (me *TjoinColumns) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ struct {
-	JoinColumns *TjoinColumns `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-columns"`
+	JoinColumns *TjoinColumns `xml:"join-columns"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ instance.
@@ -663,7 +663,7 @@ func (me *XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinCo
 }
 
 type XsdGoPkgHasElem_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ struct {
-	InverseJoinColumns *TjoinColumns `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping inverse-join-columns"`
+	InverseJoinColumns *TjoinColumns `xml:"inverse-join-columns"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ instance.
@@ -687,7 +687,7 @@ func (me *XsdGoPkgHasElem_InverseJoinColumnssequencejoinTableschema_InverseJoinC
 }
 
 type XsdGoPkgHasAttr_Schema_XsdtNmtoken_ struct {
-	Schema xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping schema,attr"`
+	Schema xsdt.Nmtoken `xml:"schema,attr"`
 }
 
 type TjoinTable struct {
@@ -724,7 +724,7 @@ func (me *TjoinTable) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_ struct {
-	JoinTable *TjoinTable `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-table"`
+	JoinTable *TjoinTable `xml:"join-table"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_ instance.
@@ -748,7 +748,7 @@ func (me *XsdGoPkgHasElem_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable
 }
 
 type XsdGoPkgHasAttr_TargetEntity_XsdtString_ struct {
-	TargetEntity xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping target-entity,attr"`
+	TargetEntity xsdt.String `xml:"target-entity,attr"`
 }
 
 type TmanyToMany struct {
@@ -805,7 +805,7 @@ func (me *TmanyToMany) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ struct {
-	ManyToManies []*TmanyToMany `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping many-to-many"`
+	ManyToManies []*TmanyToMany `xml:"many-to-many"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ instance.
@@ -852,7 +852,7 @@ func (me *TinversedByOverride) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_ struct {
-	InversedBy *TinversedByOverride `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping inversed-by"`
+	InversedBy *TinversedByOverride `xml:"inversed-by"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_ instance.
@@ -912,7 +912,7 @@ func (me *TassociationOverride) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_ struct {
-	AssociationOverrides []*TassociationOverride `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping association-override"`
+	AssociationOverrides []*TassociationOverride `xml:"association-override"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_ instance.
@@ -962,7 +962,7 @@ func (me *TassociationOverrides) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ struct {
-	AssociationOverrideses []*TassociationOverrides `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping association-overrides"`
+	AssociationOverrideses []*TassociationOverrides `xml:"association-overrides"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ instance.
@@ -988,15 +988,15 @@ func (me *XsdGoPkgHasElems_AssociationOverridessequenceentityschema_AssociationO
 }
 
 type XsdGoPkgHasAttr_Table_XsdtNmtoken_ struct {
-	Table xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping table,attr"`
+	Table xsdt.Nmtoken `xml:"table,attr"`
 }
 
 type XsdGoPkgHasAttr_Name_XsdtString_ struct {
-	Name xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping name,attr"`
+	Name xsdt.String `xml:"name,attr"`
 }
 
 type XsdGoPkgHasAttr_Query_XsdtString_ struct {
-	Query xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping query,attr"`
+	Query xsdt.String `xml:"query,attr"`
 }
 
 type TnamedQuery struct {
@@ -1023,7 +1023,7 @@ func (me *TnamedQuery) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ struct {
-	NamedQueries []*TnamedQuery `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-query"`
+	NamedQueries []*TnamedQuery `xml:"named-query"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ instance.
@@ -1073,7 +1073,7 @@ func (me *TnamedQueries) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ struct {
-	NamedQueries *TnamedQueries `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-queries"`
+	NamedQueries *TnamedQueries `xml:"named-queries"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ instance.
@@ -1097,7 +1097,7 @@ func (me *XsdGoPkgHasElem_NamedQueriessequenceentityschema_NamedQueries_TnamedQu
 }
 
 type XsdGoPkgHasAttr_Column_XsdtString_ struct {
-	Column xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping column,attr"`
+	Column xsdt.String `xml:"column,attr"`
 }
 
 type TfieldResult struct {
@@ -1124,7 +1124,7 @@ func (me *TfieldResult) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ struct {
-	FieldResults []*TfieldResult `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field-result"`
+	FieldResults []*TfieldResult `xml:"field-result"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ instance.
@@ -1150,11 +1150,11 @@ func (me *XsdGoPkgHasElems_FieldResultsequenceentityResultschema_FieldResult_Tfi
 }
 
 type XsdGoPkgHasAttr_EntityClass_XsdtString_ struct {
-	EntityClass xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-class,attr"`
+	EntityClass xsdt.String `xml:"entity-class,attr"`
 }
 
 type XsdGoPkgHasAttr_DiscriminatorColumn_XsdtString_ struct {
-	DiscriminatorColumn xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-column,attr"`
+	DiscriminatorColumn xsdt.String `xml:"discriminator-column,attr"`
 }
 
 type TentityResult struct {
@@ -1186,7 +1186,7 @@ func (me *TentityResult) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ struct {
-	EntityResults []*TentityResult `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-result"`
+	EntityResults []*TentityResult `xml:"entity-result"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ instance.
@@ -1233,7 +1233,7 @@ func (me *TcolumnResult) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ struct {
-	ColumnResults []*TcolumnResult `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping column-result"`
+	ColumnResults []*TcolumnResult `xml:"column-result"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ instance.
@@ -1290,7 +1290,7 @@ func (me *TsqlResultSetMapping) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ struct {
-	SqlResultSetMappings []*TsqlResultSetMapping `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping sql-result-set-mapping"`
+	SqlResultSetMappings []*TsqlResultSetMapping `xml:"sql-result-set-mapping"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ instance.
@@ -1340,7 +1340,7 @@ func (me *TsqlResultSetMappings) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ struct {
-	SqlResultSetMappingses []*TsqlResultSetMappings `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping sql-result-set-mappings"`
+	SqlResultSetMappingses []*TsqlResultSetMappings `xml:"sql-result-set-mappings"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ instance.
@@ -1366,7 +1366,7 @@ func (me *XsdGoPkgHasElems_SqlResultSetMappingssequenceentityschema_SqlResultSet
 }
 
 type XsdGoPkgHasAttr_ReadOnly_XsdtBoolean_False struct {
-	ReadOnly xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping read-only,attr"`
+	ReadOnly xsdt.Boolean `xml:"read-only,attr"`
 }
 
 //	Returns the default value for ReadOnly -- false
@@ -1410,11 +1410,11 @@ func (me TlifecycleCallbackType) String() string { return xsdt.Token(me).String(
 func (me TlifecycleCallbackType) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
 
 type XsdGoPkgHasAttr_Type_TlifecycleCallbackType_ struct {
-	Type TlifecycleCallbackType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping type,attr"`
+	Type TlifecycleCallbackType `xml:"type,attr"`
 }
 
 type XsdGoPkgHasAttr_Method_XsdtNmtoken_ struct {
-	Method xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping method,attr"`
+	Method xsdt.Nmtoken `xml:"method,attr"`
 }
 
 type TlifecycleCallback struct {
@@ -1441,7 +1441,7 @@ func (me *TlifecycleCallback) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ struct {
-	LifecycleCallbacks []*TlifecycleCallback `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping lifecycle-callback"`
+	LifecycleCallbacks []*TlifecycleCallback `xml:"lifecycle-callback"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ instance.
@@ -1491,7 +1491,7 @@ func (me *TlifecycleCallbacks) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ struct {
-	LifecycleCallbacks *TlifecycleCallbacks `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping lifecycle-callbacks"`
+	LifecycleCallbacks *TlifecycleCallbacks `xml:"lifecycle-callbacks"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ instance.
@@ -1515,7 +1515,7 @@ func (me *XsdGoPkgHasElem_LifecycleCallbackssequenceentityschema_LifecycleCallba
 }
 
 type XsdGoPkgHasElem_QuerysequencenamedNativeQueryschema_Query_XsdtString_ struct {
-	Query xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping query"`
+	Query xsdt.String `xml:"query"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_QuerysequencenamedNativeQueryschema_Query_XsdtString_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_QuerysequencenamedNativeQueryschema_Query_XsdtString_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElem_QuerysequencenamedNativeQueryschema_Query_XsdtString_ instance.
@@ -1536,11 +1536,11 @@ func (me *XsdGoPkgHasElem_QuerysequencenamedNativeQueryschema_Query_XsdtString_)
 }
 
 type XsdGoPkgHasAttr_ResultClass_XsdtString_ struct {
-	ResultClass xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping result-class,attr"`
+	ResultClass xsdt.String `xml:"result-class,attr"`
 }
 
 type XsdGoPkgHasAttr_ResultSetMapping_XsdtString_ struct {
-	ResultSetMapping xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping result-set-mapping,attr"`
+	ResultSetMapping xsdt.String `xml:"result-set-mapping,attr"`
 }
 
 type TnamedNativeQuery struct {
@@ -1574,7 +1574,7 @@ func (me *TnamedNativeQuery) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ struct {
-	NamedNativeQueries []*TnamedNativeQuery `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-native-query"`
+	NamedNativeQueries []*TnamedNativeQuery `xml:"named-native-query"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ instance.
@@ -1624,7 +1624,7 @@ func (me *TnamedNativeQueries) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ struct {
-	NamedNativeQueries *TnamedNativeQueries `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-native-queries"`
+	NamedNativeQueries *TnamedNativeQueries `xml:"named-native-queries"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ instance.
@@ -1669,7 +1669,7 @@ func (me *XsdGoPkgHasCdata) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_ struct {
-	Options []*Toption `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping option"`
+	Options []*Toption `xml:"option"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_ instance.
@@ -1721,7 +1721,7 @@ func (me *Toption) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_ struct {
-	Options []*Toption `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping option"`
+	Options []*Toption `xml:"option"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_ instance.
@@ -1771,7 +1771,7 @@ func (me *Toptions) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_ struct {
-	Options *Toptions `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping options"`
+	Options *Toptions `xml:"options"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_ instance.
@@ -1795,7 +1795,7 @@ func (me *XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions
 }
 
 type XsdGoPkgHasAttr_Columns_XsdtString_ struct {
-	Columns xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping columns,attr"`
+	Columns xsdt.String `xml:"columns,attr"`
 }
 
 type TuniqueConstraint struct {
@@ -1827,7 +1827,7 @@ func (me *TuniqueConstraint) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ struct {
-	UniqueConstraints []*TuniqueConstraint `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping unique-constraint"`
+	UniqueConstraints []*TuniqueConstraint `xml:"unique-constraint"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ instance.
@@ -1877,7 +1877,7 @@ func (me *TuniqueConstraints) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ struct {
-	UniqueConstraints *TuniqueConstraints `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping unique-constraints"`
+	UniqueConstraints *TuniqueConstraints `xml:"unique-constraints"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ instance.
@@ -1933,7 +1933,7 @@ func (me TgeneratorStrategy) IsTable() bool { return me.String() == "TABLE" }
 func (me TgeneratorStrategy) IsSequence() bool { return me.String() == "SEQUENCE" }
 
 type XsdGoPkgHasAttr_Strategy_TgeneratorStrategy_Auto struct {
-	Strategy TgeneratorStrategy `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping strategy,attr"`
+	Strategy TgeneratorStrategy `xml:"strategy,attr"`
 }
 
 //	Returns the default value for Strategy -- "AUTO"
@@ -1963,7 +1963,7 @@ func (me *Tgenerator) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_Generatorsequenceidschema_Generator_Tgenerator_ struct {
-	Generator *Tgenerator `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping generator"`
+	Generator *Tgenerator `xml:"generator"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_Generatorsequenceidschema_Generator_Tgenerator_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Generatorsequenceidschema_Generator_Tgenerator_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Generatorsequenceidschema_Generator_Tgenerator_ instance.
@@ -1987,19 +1987,19 @@ func (me *XsdGoPkgHasElem_Generatorsequenceidschema_Generator_Tgenerator_) Walk(
 }
 
 type XsdGoPkgHasAttr_Type_XsdtNmtoken_ struct {
-	Type xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping type,attr"`
+	Type xsdt.Nmtoken `xml:"type,attr"`
 }
 
 type XsdGoPkgHasAttr_Column_XsdtNmtoken_ struct {
-	Column xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping column,attr"`
+	Column xsdt.Nmtoken `xml:"column,attr"`
 }
 
 type XsdGoPkgHasAttr_SequenceName_XsdtNmtoken_ struct {
-	SequenceName xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping sequence-name,attr"`
+	SequenceName xsdt.Nmtoken `xml:"sequence-name,attr"`
 }
 
 type XsdGoPkgHasAttr_AllocationSize_XsdtInteger_1 struct {
-	AllocationSize xsdt.Integer `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping allocation-size,attr"`
+	AllocationSize xsdt.Integer `xml:"allocation-size,attr"`
 }
 
 //	Returns the default value for AllocationSize -- 1
@@ -2008,7 +2008,7 @@ func (me XsdGoPkgHasAttr_AllocationSize_XsdtInteger_1) AllocationSizeDefault() x
 }
 
 type XsdGoPkgHasAttr_InitialValue_XsdtInteger_1 struct {
-	InitialValue xsdt.Integer `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping initial-value,attr"`
+	InitialValue xsdt.Integer `xml:"initial-value,attr"`
 }
 
 //	Returns the default value for InitialValue -- 1
@@ -2042,7 +2042,7 @@ func (me *TsequenceGenerator) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ struct {
-	SequenceGenerator *TsequenceGenerator `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping sequence-generator"`
+	SequenceGenerator *TsequenceGenerator `xml:"sequence-generator"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ instance.
@@ -2066,7 +2066,7 @@ func (me *XsdGoPkgHasElem_SequenceGeneratorsequenceidschema_SequenceGenerator_Ts
 }
 
 type XsdGoPkgHasAttr_Class_XsdtString_ struct {
-	Class xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping class,attr"`
+	Class xsdt.String `xml:"class,attr"`
 }
 
 type TcustomIdGenerator struct {
@@ -2091,7 +2091,7 @@ func (me *TcustomIdGenerator) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ struct {
-	CustomIdGenerator *TcustomIdGenerator `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping custom-id-generator"`
+	CustomIdGenerator *TcustomIdGenerator `xml:"custom-id-generator"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ instance.
@@ -2115,7 +2115,7 @@ func (me *XsdGoPkgHasElem_CustomIdGeneratorsequenceidschema_CustomIdGenerator_Tc
 }
 
 type XsdGoPkgHasAttr_AssociationKey_XsdtBoolean_False struct {
-	AssociationKey xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping association-key,attr"`
+	AssociationKey xsdt.Boolean `xml:"association-key,attr"`
 }
 
 //	Returns the default value for AssociationKey -- false
@@ -2124,7 +2124,7 @@ func (me XsdGoPkgHasAttr_AssociationKey_XsdtBoolean_False) AssociationKeyDefault
 }
 
 type XsdGoPkgHasAttr_Length_XsdtNmtoken_ struct {
-	Length xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping length,attr"`
+	Length xsdt.Nmtoken `xml:"length,attr"`
 }
 
 type Tid struct {
@@ -2179,7 +2179,7 @@ func (me *Tid) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_Idsequenceentityschema_Id_Tid_ struct {
-	Ids []*Tid `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping id"`
+	Ids []*Tid `xml:"id"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_Idsequenceentityschema_Id_Tid_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Idsequenceentityschema_Id_Tid_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Idsequenceentityschema_Id_Tid_ instance.
@@ -2205,11 +2205,11 @@ func (me *XsdGoPkgHasElems_Idsequenceentityschema_Id_Tid_) Walk() (err error) {
 }
 
 type XsdGoPkgHasAttr_ColumnPrefix_XsdtString_ struct {
-	ColumnPrefix xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping column-prefix,attr"`
+	ColumnPrefix xsdt.String `xml:"column-prefix,attr"`
 }
 
 type XsdGoPkgHasAttr_UseColumnPrefix_XsdtBoolean_True struct {
-	UseColumnPrefix xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping use-column-prefix,attr"`
+	UseColumnPrefix xsdt.Boolean `xml:"use-column-prefix,attr"`
 }
 
 //	Returns the default value for UseColumnPrefix -- true
@@ -2245,7 +2245,7 @@ func (me *Tembedded) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_ struct {
-	Embeddeds []*Tembedded `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping embedded"`
+	Embeddeds []*Tembedded `xml:"embedded"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_ instance.
@@ -2271,15 +2271,15 @@ func (me *XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_) Wal
 }
 
 type XsdGoPkgHasAttr_RepositoryClass_XsdtString_ struct {
-	RepositoryClass xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping repository-class,attr"`
+	RepositoryClass xsdt.String `xml:"repository-class,attr"`
 }
 
 type XsdGoPkgHasAttr_Precision_XsdtInteger_ struct {
-	Precision xsdt.Integer `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping precision,attr"`
+	Precision xsdt.Integer `xml:"precision,attr"`
 }
 
 type XsdGoPkgHasAttr_Type_XsdtNmtoken_String struct {
-	Type xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping type,attr"`
+	Type xsdt.Nmtoken `xml:"type,attr"`
 }
 
 //	Returns the default value for Type -- "string"
@@ -2288,15 +2288,15 @@ func (me XsdGoPkgHasAttr_Type_XsdtNmtoken_String) TypeDefault() xsdt.Nmtoken {
 }
 
 type XsdGoPkgHasAttr_Scale_XsdtInteger_ struct {
-	Scale xsdt.Integer `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping scale,attr"`
+	Scale xsdt.Integer `xml:"scale,attr"`
 }
 
 type XsdGoPkgHasAttr_Version_XsdtBoolean_ struct {
-	Version xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping version,attr"`
+	Version xsdt.Boolean `xml:"version,attr"`
 }
 
 type XsdGoPkgHasAttr_Nullable_XsdtBoolean_False struct {
-	Nullable xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping nullable,attr"`
+	Nullable xsdt.Boolean `xml:"nullable,attr"`
 }
 
 //	Returns the default value for Nullable -- false
@@ -2349,7 +2349,7 @@ func (me *Tfield) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_ struct {
-	Fields []*Tfield `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field"`
+	Fields []*Tfield `xml:"field"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_ instance.
@@ -2421,7 +2421,7 @@ func (me *ToneToMany) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_ struct {
-	OneToManies []*ToneToMany `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping one-to-many"`
+	OneToManies []*ToneToMany `xml:"one-to-many"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_ instance.
@@ -2467,11 +2467,11 @@ func (me TinheritanceType) IsJoined() bool { return me.String() == "JOINED" }
 func (me TinheritanceType) IsTablePerClass() bool { return me.String() == "TABLE_PER_CLASS" }
 
 type XsdGoPkgHasAttr_InheritanceType_TinheritanceType_ struct {
-	InheritanceType TinheritanceType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping inheritance-type,attr"`
+	InheritanceType TinheritanceType `xml:"inheritance-type,attr"`
 }
 
 type XsdGoPkgHasAttr_Value_XsdtNmtoken_ struct {
-	Value xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping value,attr"`
+	Value xsdt.Nmtoken `xml:"value,attr"`
 }
 
 type TdiscriminatorMapping struct {
@@ -2498,7 +2498,7 @@ func (me *TdiscriminatorMapping) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ struct {
-	DiscriminatorMappings []*TdiscriminatorMapping `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-mapping"`
+	DiscriminatorMappings []*TdiscriminatorMapping `xml:"discriminator-mapping"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ instance.
@@ -2548,7 +2548,7 @@ func (me *TdiscriminatorMap) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ struct {
-	DiscriminatorMap *TdiscriminatorMap `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-map"`
+	DiscriminatorMap *TdiscriminatorMap `xml:"discriminator-map"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ instance.
@@ -2598,7 +2598,7 @@ func (me *TentityListener) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ struct {
-	EntityListeners []*TentityListener `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-listener"`
+	EntityListeners []*TentityListener `xml:"entity-listener"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ instance.
@@ -2648,7 +2648,7 @@ func (me *TentityListeners) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ struct {
-	EntityListeners *TentityListeners `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-listeners"`
+	EntityListeners *TentityListeners `xml:"entity-listeners"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ instance.
@@ -2672,7 +2672,7 @@ func (me *XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_Te
 }
 
 type XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_ struct {
-	JoinColumn *TjoinColumn `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-column"`
+	JoinColumn *TjoinColumn `xml:"join-column"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_ instance.
@@ -2747,7 +2747,7 @@ func (me *ToneToOne) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_ struct {
-	OneToOnes []*ToneToOne `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping one-to-one"`
+	OneToOnes []*ToneToOne `xml:"one-to-one"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_ instance.
@@ -2822,7 +2822,7 @@ func (me *TmanyToOne) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ struct {
-	ManyToOnes []*TmanyToOne `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping many-to-one"`
+	ManyToOnes []*TmanyToOne `xml:"many-to-one"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ instance.
@@ -2868,11 +2868,11 @@ func (me TchangeTrackingPolicy) IsDeferredImplicit() bool { return me.String() =
 func (me TchangeTrackingPolicy) IsDeferredExplicit() bool { return me.String() == "DEFERRED_EXPLICIT" }
 
 type XsdGoPkgHasAttr_ChangeTrackingPolicy_TchangeTrackingPolicy_ struct {
-	ChangeTrackingPolicy TchangeTrackingPolicy `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping change-tracking-policy,attr"`
+	ChangeTrackingPolicy TchangeTrackingPolicy `xml:"change-tracking-policy,attr"`
 }
 
 type XsdGoPkgHasAttr_Flags_XsdtString_ struct {
-	Flags xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping flags,attr"`
+	Flags xsdt.String `xml:"flags,attr"`
 }
 
 type Tindex struct {
@@ -2906,7 +2906,7 @@ func (me *Tindex) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_ struct {
-	Indexs []*Tindex `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping index"`
+	Indexs []*Tindex `xml:"index"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_ instance.
@@ -2956,7 +2956,7 @@ func (me *Tindexes) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_ struct {
-	Indexes *Tindexes `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping indexes"`
+	Indexes *Tindexes `xml:"indexes"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_ instance.
@@ -3022,7 +3022,7 @@ func (me *TattributeOverrideField) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ struct {
-	Field *TattributeOverrideField `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field"`
+	Field *TattributeOverrideField `xml:"field"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ instance.
@@ -3072,7 +3072,7 @@ func (me *TattributeOverride) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ struct {
-	AttributeOverrides []*TattributeOverride `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping attribute-override"`
+	AttributeOverrides []*TattributeOverride `xml:"attribute-override"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ instance.
@@ -3122,7 +3122,7 @@ func (me *TattributeOverrides) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ struct {
-	AttributeOverrideses []*TattributeOverrides `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping attribute-overrides"`
+	AttributeOverrideses []*TattributeOverrides `xml:"attribute-overrides"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ instance.
@@ -3148,7 +3148,7 @@ func (me *XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverr
 }
 
 type XsdGoPkgHasAttr_FieldName_XsdtNmtoken_ struct {
-	FieldName xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field-name,attr"`
+	FieldName xsdt.Nmtoken `xml:"field-name,attr"`
 }
 
 type TdiscriminatorColumn struct {
@@ -3181,7 +3181,7 @@ func (me *TdiscriminatorColumn) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ struct {
-	DiscriminatorColumn *TdiscriminatorColumn `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-column"`
+	DiscriminatorColumn *TdiscriminatorColumn `xml:"discriminator-column"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ instance.
@@ -3338,7 +3338,7 @@ func (me *Tentity) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_EntitysequenceTxsdDoctrineMappingdoctrineMappingschema_Entity_Tentity_ struct {
-	Entities []*Tentity `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity"`
+	Entities []*Tentity `xml:"entity"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_EntitysequenceTxsdDoctrineMappingdoctrineMappingschema_Entity_Tentity_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_EntitysequenceTxsdDoctrineMappingdoctrineMappingschema_Entity_Tentity_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_EntitysequenceTxsdDoctrineMappingdoctrineMappingschema_Entity_Tentity_ instance.
@@ -3388,7 +3388,7 @@ func (me *Tembeddable) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_ struct {
-	Embeddables []*Tembeddable `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping embeddable"`
+	Embeddables []*Tembeddable `xml:"embeddable"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_ instance.
@@ -3438,7 +3438,7 @@ func (me *TmappedSuperclass) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ struct {
-	MappedSuperclasses []*TmappedSuperclass `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping mapped-superclass"`
+	MappedSuperclasses []*TmappedSuperclass `xml:"mapped-superclass"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ instance.
@@ -3498,7 +3498,7 @@ func (me *TxsdDoctrineMapping) Walk() (err error) {
 }
 
 type XsdGoPkgHasElems_DoctrineMapping struct {
-	DoctrineMappings []*TxsdDoctrineMapping `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping doctrine-mapping"`
+	DoctrineMappings []*TxsdDoctrineMapping `xml:"doctrine-mapping"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_DoctrineMapping function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_DoctrineMapping instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_DoctrineMapping instance.
@@ -3524,7 +3524,7 @@ func (me *XsdGoPkgHasElems_DoctrineMapping) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_DoctrineMapping struct {
-	DoctrineMapping *TxsdDoctrineMapping `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping doctrine-mapping"`
+	DoctrineMapping *TxsdDoctrineMapping `xml:"doctrine-mapping"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_DoctrineMapping function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_DoctrineMapping instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_DoctrineMapping instance.
@@ -3548,7 +3548,7 @@ func (me *XsdGoPkgHasElem_DoctrineMapping) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_ struct {
-	Embeddable *Tembeddable `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping embeddable"`
+	Embeddable *Tembeddable `xml:"embeddable"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_ instance.
@@ -3572,7 +3572,7 @@ func (me *XsdGoPkgHasElem_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingsc
 }
 
 type XsdGoPkgHasElems_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ struct {
-	JoinColumnses []*TjoinColumns `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-columns"`
+	JoinColumnses []*TjoinColumns `xml:"join-columns"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ instance.
@@ -3598,7 +3598,7 @@ func (me *XsdGoPkgHasElems_JoinColumnssequencejoinTableschema_JoinColumns_TjoinC
 }
 
 type XsdGoPkgHasElems_Optionssequenceidschema_Options_Toptions_ struct {
-	Optionses []*Toptions `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping options"`
+	Optionses []*Toptions `xml:"options"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_Optionssequenceidschema_Options_Toptions_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Optionssequenceidschema_Options_Toptions_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Optionssequenceidschema_Options_Toptions_ instance.
@@ -3624,7 +3624,7 @@ func (me *XsdGoPkgHasElems_Optionssequenceidschema_Options_Toptions_) Walk() (er
 }
 
 type XsdGoPkgHasElems_CachesequencemanyToOneschema_Cache_Tcache_ struct {
-	Caches []*Tcache `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cache"`
+	Caches []*Tcache `xml:"cache"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_CachesequencemanyToOneschema_Cache_Tcache_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CachesequencemanyToOneschema_Cache_Tcache_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CachesequencemanyToOneschema_Cache_Tcache_ instance.
@@ -3650,7 +3650,7 @@ func (me *XsdGoPkgHasElems_CachesequencemanyToOneschema_Cache_Tcache_) Walk() (e
 }
 
 type XsdGoPkgHasElem_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_ struct {
-	AssociationOverride *TassociationOverride `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping association-override"`
+	AssociationOverride *TassociationOverride `xml:"association-override"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_ instance.
@@ -3674,7 +3674,7 @@ func (me *XsdGoPkgHasElem_AssociationOverridesequenceassociationOverridesschema_
 }
 
 type XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ struct {
-	DiscriminatorMapping *TdiscriminatorMapping `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-mapping"`
+	DiscriminatorMapping *TdiscriminatorMapping `xml:"discriminator-mapping"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ instance.
@@ -3698,7 +3698,7 @@ func (me *XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_Dis
 }
 
 type XsdGoPkgHasElems_CascadesequenceoneToOneschema_Cascade_TcascadeType_ struct {
-	Cascades []*TcascadeType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade"`
+	Cascades []*TcascadeType `xml:"cascade"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_CascadesequenceoneToOneschema_Cascade_TcascadeType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadesequenceoneToOneschema_Cascade_TcascadeType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadesequenceoneToOneschema_Cascade_TcascadeType_ instance.
@@ -3724,7 +3724,7 @@ func (me *XsdGoPkgHasElems_CascadesequenceoneToOneschema_Cascade_TcascadeType_) 
 }
 
 type XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ struct {
-	FieldResult *TfieldResult `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field-result"`
+	FieldResult *TfieldResult `xml:"field-result"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ instance.
@@ -3748,7 +3748,7 @@ func (me *XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_Tfie
 }
 
 type XsdGoPkgHasElems_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ struct {
-	EntityListenerses []*TentityListeners `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-listeners"`
+	EntityListenerses []*TentityListeners `xml:"entity-listeners"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ instance.
@@ -3774,7 +3774,7 @@ func (me *XsdGoPkgHasElems_EntityListenerssequenceentityschema_EntityListeners_T
 }
 
 type XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_ struct {
-	Field *Tfield `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field"`
+	Field *Tfield `xml:"field"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_ instance.
@@ -3798,7 +3798,7 @@ func (me *XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_) Walk() (err e
 }
 
 type XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_ struct {
-	Entity *Tentity `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity"`
+	Entity *Tentity `xml:"entity"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_ instance.
@@ -3822,7 +3822,7 @@ func (me *XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_) W
 }
 
 type XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_ struct {
-	OneToOne *ToneToOne `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping one-to-one"`
+	OneToOne *ToneToOne `xml:"one-to-one"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_ instance.
@@ -3846,7 +3846,7 @@ func (me *XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_) Walk
 }
 
 type XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_ struct {
-	OneToMany *ToneToMany `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping one-to-many"`
+	OneToMany *ToneToMany `xml:"one-to-many"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_ instance.
@@ -3870,7 +3870,7 @@ func (me *XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_) W
 }
 
 type XsdGoPkgHasElems_JoinTablesequenceassociationOverrideschema_JoinTable_TjoinTable_ struct {
-	JoinTables []*TjoinTable `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-table"`
+	JoinTables []*TjoinTable `xml:"join-table"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_JoinTablesequenceassociationOverrideschema_JoinTable_TjoinTable_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_JoinTablesequenceassociationOverrideschema_JoinTable_TjoinTable_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_JoinTablesequenceassociationOverrideschema_JoinTable_TjoinTable_ instance.
@@ -3896,7 +3896,7 @@ func (me *XsdGoPkgHasElems_JoinTablesequenceassociationOverrideschema_JoinTable_
 }
 
 type XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ struct {
-	DiscriminatorColumns []*TdiscriminatorColumn `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-column"`
+	DiscriminatorColumns []*TdiscriminatorColumn `xml:"discriminator-column"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ instance.
@@ -3922,7 +3922,7 @@ func (me *XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_Discriminator
 }
 
 type XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ struct {
-	NamedNativeQuerieses []*TnamedNativeQueries `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-native-queries"`
+	NamedNativeQuerieses []*TnamedNativeQueries `xml:"named-native-queries"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ instance.
@@ -3948,7 +3948,7 @@ func (me *XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQue
 }
 
 type XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ struct {
-	AttributeOverride *TattributeOverride `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping attribute-override"`
+	AttributeOverride *TattributeOverride `xml:"attribute-override"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ instance.
@@ -3972,7 +3972,7 @@ func (me *XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_Attr
 }
 
 type XsdGoPkgHasElems_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ struct {
-	CascadeAlls []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-all"`
+	CascadeAlls []*TemptyType `xml:"cascade-all"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ instance.
@@ -3998,7 +3998,7 @@ func (me *XsdGoPkgHasElems_CascadeAllsequencecascadeTypeschema_CascadeAll_Tempty
 }
 
 type XsdGoPkgHasElems_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_ struct {
-	InversedBies []*TinversedByOverride `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping inversed-by"`
+	InversedBies []*TinversedByOverride `xml:"inversed-by"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_ instance.
@@ -4024,7 +4024,7 @@ func (me *XsdGoPkgHasElems_InversedBysequenceassociationOverrideschema_InversedB
 }
 
 type XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ struct {
-	CascadeRefreshs []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-refresh"`
+	CascadeRefreshs []*TemptyType `xml:"cascade-refresh"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ instance.
@@ -4050,7 +4050,7 @@ func (me *XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefres
 }
 
 type XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ struct {
-	ManyToMany *TmanyToMany `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping many-to-many"`
+	ManyToMany *TmanyToMany `xml:"many-to-many"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ instance.
@@ -4074,7 +4074,7 @@ func (me *XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_
 }
 
 type XsdGoPkgHasElems_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ struct {
-	UniqueConstraintses []*TuniqueConstraints `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping unique-constraints"`
+	UniqueConstraintses []*TuniqueConstraints `xml:"unique-constraints"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ instance.
@@ -4100,7 +4100,7 @@ func (me *XsdGoPkgHasElems_UniqueConstraintssequenceentityschema_UniqueConstrain
 }
 
 type XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ struct {
-	EntityResult *TentityResult `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-result"`
+	EntityResult *TentityResult `xml:"entity-result"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ instance.
@@ -4124,7 +4124,7 @@ func (me *XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_En
 }
 
 type XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ struct {
-	OrderByField *TorderByField `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping order-by-field"`
+	OrderByField *TorderByField `xml:"order-by-field"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ instance.
@@ -4148,7 +4148,7 @@ func (me *XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderB
 }
 
 type XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ struct {
-	SequenceGenerators []*TsequenceGenerator `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping sequence-generator"`
+	SequenceGenerators []*TsequenceGenerator `xml:"sequence-generator"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ instance.
@@ -4174,7 +4174,7 @@ func (me *XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_T
 }
 
 type XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ struct {
-	CustomIdGenerators []*TcustomIdGenerator `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping custom-id-generator"`
+	CustomIdGenerators []*TcustomIdGenerator `xml:"custom-id-generator"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ instance.
@@ -4200,7 +4200,7 @@ func (me *XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_T
 }
 
 type XsdGoPkgHasElems_Indexessequenceentityschema_Indexes_Tindexes_ struct {
-	Indexeses []*Tindexes `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping indexes"`
+	Indexeses []*Tindexes `xml:"indexes"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_Indexessequenceentityschema_Indexes_Tindexes_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Indexessequenceentityschema_Indexes_Tindexes_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Indexessequenceentityschema_Indexes_Tindexes_ instance.
@@ -4226,7 +4226,7 @@ func (me *XsdGoPkgHasElems_Indexessequenceentityschema_Indexes_Tindexes_) Walk()
 }
 
 type XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ struct {
-	CascadePersists []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-persist"`
+	CascadePersists []*TemptyType `xml:"cascade-persist"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ instance.
@@ -4252,7 +4252,7 @@ func (me *XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersis
 }
 
 type XsdGoPkgHasElems_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ struct {
-	OrderBies []*TorderBy `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping order-by"`
+	OrderBies []*TorderBy `xml:"order-by"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ instance.
@@ -4278,7 +4278,7 @@ func (me *XsdGoPkgHasElems_OrderBysequencemanyToManyschema_OrderBy_TorderBy_) Wa
 }
 
 type XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ struct {
-	NamedQuery *TnamedQuery `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-query"`
+	NamedQuery *TnamedQuery `xml:"named-query"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ instance.
@@ -4302,7 +4302,7 @@ func (me *XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_Tnamed
 }
 
 type XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_ struct {
-	Queries []xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping query"`
+	Queries []xsdt.String `xml:"query"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_ instance.
@@ -4323,7 +4323,7 @@ func (me *XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_
 }
 
 type XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ struct {
-	LifecycleCallback *TlifecycleCallback `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping lifecycle-callback"`
+	LifecycleCallback *TlifecycleCallback `xml:"lifecycle-callback"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ instance.
@@ -4347,7 +4347,7 @@ func (me *XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_Life
 }
 
 type XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ struct {
-	NamedQuerieses []*TnamedQueries `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-queries"`
+	NamedQuerieses []*TnamedQueries `xml:"named-queries"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ instance.
@@ -4373,7 +4373,7 @@ func (me *XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQ
 }
 
 type XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ struct {
-	AttributeOverrides *TattributeOverrides `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping attribute-overrides"`
+	AttributeOverrides *TattributeOverrides `xml:"attribute-overrides"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ instance.
@@ -4397,7 +4397,7 @@ func (me *XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverri
 }
 
 type XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ struct {
-	UniqueConstraint *TuniqueConstraint `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping unique-constraint"`
+	UniqueConstraint *TuniqueConstraint `xml:"unique-constraint"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ instance.
@@ -4421,7 +4421,7 @@ func (me *XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_Unique
 }
 
 type XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_ struct {
-	Index *Tindex `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping index"`
+	Index *Tindex `xml:"index"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_ instance.
@@ -4445,7 +4445,7 @@ func (me *XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_) Walk() (err 
 }
 
 type XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ struct {
-	CascadeRemoves []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-remove"`
+	CascadeRemoves []*TemptyType `xml:"cascade-remove"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ instance.
@@ -4471,7 +4471,7 @@ func (me *XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_
 }
 
 type XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ struct {
-	SqlResultSetMappings *TsqlResultSetMappings `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping sql-result-set-mappings"`
+	SqlResultSetMappings *TsqlResultSetMappings `xml:"sql-result-set-mappings"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ instance.
@@ -4495,7 +4495,7 @@ func (me *XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetM
 }
 
 type XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ struct {
-	Fields []*TattributeOverrideField `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field"`
+	Fields []*TattributeOverrideField `xml:"field"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ instance.
@@ -4521,7 +4521,7 @@ func (me *XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_Tattribute
 }
 
 type XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ struct {
-	ColumnResult *TcolumnResult `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping column-result"`
+	ColumnResult *TcolumnResult `xml:"column-result"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ instance.
@@ -4569,7 +4569,7 @@ func (me *TinverseJoinColumns) Walk() (err error) {
 }
 
 type XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ struct {
-	EntityListener *TentityListener `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-listener"`
+	EntityListener *TentityListener `xml:"entity-listener"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ instance.
@@ -4593,7 +4593,7 @@ func (me *XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityList
 }
 
 type XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_ struct {
-	Generators []*Tgenerator `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping generator"`
+	Generators []*Tgenerator `xml:"generator"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_ instance.
@@ -4619,7 +4619,7 @@ func (me *XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_) Walk
 }
 
 type XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ struct {
-	LifecycleCallbackses []*TlifecycleCallbacks `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping lifecycle-callbacks"`
+	LifecycleCallbackses []*TlifecycleCallbacks `xml:"lifecycle-callbacks"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ instance.
@@ -4645,7 +4645,7 @@ func (me *XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallb
 }
 
 type XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ struct {
-	InverseJoinColumnses []*TjoinColumns `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping inverse-join-columns"`
+	InverseJoinColumnses []*TjoinColumns `xml:"inverse-join-columns"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ instance.
@@ -4671,7 +4671,7 @@ func (me *XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoin
 }
 
 type XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ struct {
-	CascadeDetachs []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-detach"`
+	CascadeDetachs []*TemptyType `xml:"cascade-detach"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ instance.
@@ -4697,7 +4697,7 @@ func (me *XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_
 }
 
 type XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ struct {
-	AssociationOverrides *TassociationOverrides `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping association-overrides"`
+	AssociationOverrides *TassociationOverrides `xml:"association-overrides"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ instance.
@@ -4721,7 +4721,7 @@ func (me *XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOv
 }
 
 type XsdGoPkgHasElem_Optionsequenceoptionsschema_Option_Toption_ struct {
-	Option *Toption `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping option"`
+	Option *Toption `xml:"option"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_Optionsequenceoptionsschema_Option_Toption_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Optionsequenceoptionsschema_Option_Toption_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Optionsequenceoptionsschema_Option_Toption_ instance.
@@ -4745,7 +4745,7 @@ func (me *XsdGoPkgHasElem_Optionsequenceoptionsschema_Option_Toption_) Walk() (e
 }
 
 type XsdGoPkgHasElem_MappedSuperclasssequencedoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ struct {
-	MappedSuperclass *TmappedSuperclass `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping mapped-superclass"`
+	MappedSuperclass *TmappedSuperclass `xml:"mapped-superclass"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_MappedSuperclasssequencedoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_MappedSuperclasssequencedoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_MappedSuperclasssequencedoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ instance.
@@ -4769,7 +4769,7 @@ func (me *XsdGoPkgHasElem_MappedSuperclasssequencedoctrineMappingschema_MappedSu
 }
 
 type XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_ struct {
-	Embedded *Tembedded `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping embedded"`
+	Embedded *Tembedded `xml:"embedded"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_ instance.
@@ -4793,7 +4793,7 @@ func (me *XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_) Walk
 }
 
 type XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ struct {
-	SqlResultSetMapping *TsqlResultSetMapping `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping sql-result-set-mapping"`
+	SqlResultSetMapping *TsqlResultSetMapping `xml:"sql-result-set-mapping"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ instance.
@@ -4817,7 +4817,7 @@ func (me *XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_
 }
 
 type XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ struct {
-	NamedNativeQuery *TnamedNativeQuery `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-native-query"`
+	NamedNativeQuery *TnamedNativeQuery `xml:"named-native-query"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ instance.
@@ -4841,7 +4841,7 @@ func (me *XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_Named
 }
 
 type XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ struct {
-	DiscriminatorMaps []*TdiscriminatorMap `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-map"`
+	DiscriminatorMaps []*TdiscriminatorMap `xml:"discriminator-map"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ instance.
@@ -4867,7 +4867,7 @@ func (me *XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap
 }
 
 type XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ struct {
-	ManyToOne *TmanyToOne `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping many-to-one"`
+	ManyToOne *TmanyToOne `xml:"many-to-one"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ instance.
@@ -4891,7 +4891,7 @@ func (me *XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_) W
 }
 
 type XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ struct {
-	CascadeMerges []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-merge"`
+	CascadeMerges []*TemptyType `xml:"cascade-merge"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ instance.
@@ -4917,7 +4917,7 @@ func (me *XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_Te
 }
 
 type XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_ struct {
-	Id *Tid `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping id"`
+	Id *Tid `xml:"id"`
 }
 
 //	If the WalkHandlers.XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_ instance.
