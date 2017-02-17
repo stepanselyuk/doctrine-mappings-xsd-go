@@ -11,622 +11,20 @@ import (
 	xsdt "github.com/metaleap/go-xsd/types"
 )
 
-type XsdGoPkgHasAttr_Name_XsdtString_ struct {
-	Name xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping name,attr"`
+type XsdGoPkgHasAttr_IndexBy_XsdtNmtoken_ struct {
+	IndexBy xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping index-by,attr"`
 }
 
-type XsdGoPkgHasAttr_Class_XsdtString_ struct {
-	Class xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping class,attr"`
+type XsdGoPkgHasAttr_OrphanRemoval_XsdtBoolean_False struct {
+	OrphanRemoval xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping orphan-removal,attr"`
 }
 
-type XsdGoPkgHasAttr_ColumnPrefix_XsdtString_ struct {
-	ColumnPrefix xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping column-prefix,attr"`
-}
-
-type XsdGoPkgHasAttr_UseColumnPrefix_XsdtBoolean_True struct {
-	UseColumnPrefix xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping use-column-prefix,attr"`
-}
-
-//	Returns the default value for UseColumnPrefix -- true
-func (me XsdGoPkgHasAttr_UseColumnPrefix_XsdtBoolean_True) UseColumnPrefixDefault() xsdt.Boolean {
-	return xsdt.Boolean(true)
-}
-
-type Tembedded struct {
-	XsdGoPkgHasAttr_ColumnPrefix_XsdtString_
-
-	XsdGoPkgHasAttr_UseColumnPrefix_XsdtBoolean_True
-
-	XsdGoPkgHasAttr_Name_XsdtString_
-
-	XsdGoPkgHasAttr_Class_XsdtString_
-}
-
-//	If the WalkHandlers.Tembedded function is not nil (ie. was set by outside code), calls it with this Tembedded instance as the single argument. Then calls the Walk() method on 0/4 embed(s) and 0/0 field(s) belonging to this Tembedded instance.
-func (me *Tembedded) Walk() (err error) {
-	if fn := WalkHandlers.Tembedded; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_ struct {
-	Embeddeds []*Tembedded `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping embedded"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_ instance.
-func (me *XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.Embeddeds {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasAttr_Type_XsdtNmtoken_String struct {
-	Type xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping type,attr"`
-}
-
-//	Returns the default value for Type -- "string"
-func (me XsdGoPkgHasAttr_Type_XsdtNmtoken_String) TypeDefault() xsdt.Nmtoken {
-	return xsdt.Nmtoken("string")
-}
-
-type XsdGoPkgHasAttr_Unique_XsdtBoolean_False struct {
-	Unique xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping unique,attr"`
-}
-
-//	Returns the default value for Unique -- false
-func (me XsdGoPkgHasAttr_Unique_XsdtBoolean_False) UniqueDefault() xsdt.Boolean {
+//	Returns the default value for OrphanRemoval -- false
+func (me XsdGoPkgHasAttr_OrphanRemoval_XsdtBoolean_False) OrphanRemovalDefault() xsdt.Boolean {
 	return xsdt.Boolean(false)
-}
-
-type XsdGoPkgHasAttr_Version_XsdtBoolean_ struct {
-	Version xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping version,attr"`
-}
-
-type XsdGoPkgHasAttr_Column_XsdtNmtoken_ struct {
-	Column xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping column,attr"`
-}
-
-type XsdGoPkgHasAttr_Precision_XsdtInteger_ struct {
-	Precision xsdt.Integer `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping precision,attr"`
-}
-
-type XsdGoPkgHasAttr_ColumnDefinition_XsdtString_ struct {
-	ColumnDefinition xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping column-definition,attr"`
-}
-
-type XsdGoPkgHasAttr_Nullable_XsdtBoolean_False struct {
-	Nullable xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping nullable,attr"`
-}
-
-//	Returns the default value for Nullable -- false
-func (me XsdGoPkgHasAttr_Nullable_XsdtBoolean_False) NullableDefault() xsdt.Boolean {
-	return xsdt.Boolean(false)
-}
-
-type XsdGoPkgHasCdata struct {
-	XsdGoPkgCDATA string `xml:",chardata"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasCdata function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasCdata instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasCdata instance.
-func (me *XsdGoPkgHasCdata) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasCdata; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_ struct {
-	Options []*Toption `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping option"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_ instance.
-func (me *XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasAttr_Name_XsdtNmtoken_ struct {
-	Name xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping name,attr"`
-}
-
-type Toption struct {
-	XsdGoPkgHasCdata
-
-	XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_
-
-	XsdGoPkgHasAttr_Name_XsdtNmtoken_
-}
-
-//	If the WalkHandlers.Toption function is not nil (ie. was set by outside code), calls it with this Toption instance as the single argument. Then calls the Walk() method on 2/3 embed(s) and 0/0 field(s) belonging to this Toption instance.
-func (me *Toption) Walk() (err error) {
-	if fn := WalkHandlers.Toption; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasCdata.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_ struct {
-	Options []*Toption `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping option"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_ instance.
-func (me *XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.Options {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type Toptions struct {
-	XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_
-}
-
-//	If the WalkHandlers.Toptions function is not nil (ie. was set by outside code), calls it with this Toptions instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this Toptions instance.
-func (me *Toptions) Walk() (err error) {
-	if fn := WalkHandlers.Toptions; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_ struct {
-	Options *Toptions `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping options"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_ instance.
-func (me *XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.Options.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasAttr_Scale_XsdtInteger_ struct {
-	Scale xsdt.Integer `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping scale,attr"`
-}
-
-type XsdGoPkgHasAttr_Length_XsdtNmtoken_ struct {
-	Length xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping length,attr"`
-}
-
-type TattributeOverrideField struct {
-	XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_
-
-	XsdGoPkgHasAttr_Scale_XsdtInteger_
-
-	XsdGoPkgHasAttr_Length_XsdtNmtoken_
-
-	XsdGoPkgHasAttr_Nullable_XsdtBoolean_False
-
-	XsdGoPkgHasAttr_Column_XsdtNmtoken_
-
-	XsdGoPkgHasAttr_Precision_XsdtInteger_
-
-	XsdGoPkgHasAttr_ColumnDefinition_XsdtString_
-
-	XsdGoPkgHasAttr_Type_XsdtNmtoken_String
-
-	XsdGoPkgHasAttr_Unique_XsdtBoolean_False
-
-	XsdGoPkgHasAttr_Version_XsdtBoolean_
-}
-
-//	If the WalkHandlers.TattributeOverrideField function is not nil (ie. was set by outside code), calls it with this TattributeOverrideField instance as the single argument. Then calls the Walk() method on 1/10 embed(s) and 0/0 field(s) belonging to this TattributeOverrideField instance.
-func (me *TattributeOverrideField) Walk() (err error) {
-	if fn := WalkHandlers.TattributeOverrideField; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ struct {
-	Field *TattributeOverrideField `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ instance.
-func (me *XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.Field.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type TattributeOverride struct {
-	XsdGoPkgHasAttr_Name_XsdtNmtoken_
-
-	XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_
-}
-
-//	If the WalkHandlers.TattributeOverride function is not nil (ie. was set by outside code), calls it with this TattributeOverride instance as the single argument. Then calls the Walk() method on 1/2 embed(s) and 0/0 field(s) belonging to this TattributeOverride instance.
-func (me *TattributeOverride) Walk() (err error) {
-	if fn := WalkHandlers.TattributeOverride; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ struct {
-	AttributeOverrides []*TattributeOverride `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping attribute-override"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ instance.
-func (me *XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.AttributeOverrides {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type TattributeOverrides struct {
-	XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_
-}
-
-//	If the WalkHandlers.TattributeOverrides function is not nil (ie. was set by outside code), calls it with this TattributeOverrides instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this TattributeOverrides instance.
-func (me *TattributeOverrides) Walk() (err error) {
-	if fn := WalkHandlers.TattributeOverrides; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ struct {
-	AttributeOverrideses []*TattributeOverrides `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping attribute-overrides"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ instance.
-func (me *XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.AttributeOverrideses {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasAttr_FieldName_XsdtNmtoken_ struct {
-	FieldName xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field-name,attr"`
-}
-
-type XsdGoPkgHasAttr_Type_XsdtNmtoken_ struct {
-	Type xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping type,attr"`
-}
-
-type TdiscriminatorColumn struct {
-	XsdGoPkgHasAttr_FieldName_XsdtNmtoken_
-
-	XsdGoPkgHasAttr_Length_XsdtNmtoken_
-
-	XsdGoPkgHasAttr_ColumnDefinition_XsdtString_
-
-	XsdGoPkgHasAttr_Name_XsdtNmtoken_
-
-	XsdGoPkgHasAttr_Type_XsdtNmtoken_
-}
-
-//	If the WalkHandlers.TdiscriminatorColumn function is not nil (ie. was set by outside code), calls it with this TdiscriminatorColumn instance as the single argument. Then calls the Walk() method on 0/5 embed(s) and 0/0 field(s) belonging to this TdiscriminatorColumn instance.
-func (me *TdiscriminatorColumn) Walk() (err error) {
-	if fn := WalkHandlers.TdiscriminatorColumn; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ struct {
-	DiscriminatorColumn *TdiscriminatorColumn `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-column"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ instance.
-func (me *XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.DiscriminatorColumn.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasAttr_Nullable_XsdtBoolean_True struct {
-	Nullable xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping nullable,attr"`
-}
-
-//	Returns the default value for Nullable -- true
-func (me XsdGoPkgHasAttr_Nullable_XsdtBoolean_True) NullableDefault() xsdt.Boolean {
-	return xsdt.Boolean(true)
-}
-
-type TfkAction xsdt.Token
-
-//	Since TfkAction is just a simple String type, this merely sets the current value from the specified string.
-func (me *TfkAction) Set(s string) { (*xsdt.Token)(me).Set(s) }
-
-//	Since TfkAction is just a simple String type, this merely returns the current string value.
-func (me TfkAction) String() string { return xsdt.Token(me).String() }
-
-//	This convenience method just performs a simple type conversion to TfkAction's alias type xsdt.Token.
-func (me TfkAction) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
-
-//	Returns true if the value of this enumerated TfkAction is "CASCADE".
-func (me TfkAction) IsCascade() bool { return me.String() == "CASCADE" }
-
-//	Returns true if the value of this enumerated TfkAction is "RESTRICT".
-func (me TfkAction) IsRestrict() bool { return me.String() == "RESTRICT" }
-
-//	Returns true if the value of this enumerated TfkAction is "SET NULL".
-func (me TfkAction) IsSetNull() bool { return me.String() == "SET NULL" }
-
-type XsdGoPkgHasAttr_OnDelete_TfkAction_ struct {
-	OnDelete TfkAction `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping on-delete,attr"`
-}
-
-type XsdGoPkgHasAttr_ReferencedColumnName_XsdtNmtoken_Id struct {
-	ReferencedColumnName xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping referenced-column-name,attr"`
-}
-
-//	Returns the default value for ReferencedColumnName -- "id"
-func (me XsdGoPkgHasAttr_ReferencedColumnName_XsdtNmtoken_Id) ReferencedColumnNameDefault() xsdt.Nmtoken {
-	return xsdt.Nmtoken("id")
-}
-
-type TjoinColumn struct {
-	XsdGoPkgHasAttr_ReferencedColumnName_XsdtNmtoken_Id
-
-	XsdGoPkgHasAttr_Unique_XsdtBoolean_False
-
-	XsdGoPkgHasAttr_Nullable_XsdtBoolean_True
-
-	XsdGoPkgHasAttr_OnDelete_TfkAction_
-
-	XsdGoPkgHasAttr_ColumnDefinition_XsdtString_
-
-	XsdGoPkgHasAttr_Name_XsdtNmtoken_
-}
-
-//	If the WalkHandlers.TjoinColumn function is not nil (ie. was set by outside code), calls it with this TjoinColumn instance as the single argument. Then calls the Walk() method on 0/6 embed(s) and 0/0 field(s) belonging to this TjoinColumn instance.
-func (me *TjoinColumn) Walk() (err error) {
-	if fn := WalkHandlers.TjoinColumn; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_JoinColumnchoicesequencemanyToOneschema_JoinColumn_TjoinColumn_ struct {
-	JoinColumn *TjoinColumn `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-column"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_JoinColumnchoicesequencemanyToOneschema_JoinColumn_TjoinColumn_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_JoinColumnchoicesequencemanyToOneschema_JoinColumn_TjoinColumn_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_JoinColumnchoicesequencemanyToOneschema_JoinColumn_TjoinColumn_ instance.
-func (me *XsdGoPkgHasElem_JoinColumnchoicesequencemanyToOneschema_JoinColumn_TjoinColumn_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_JoinColumnchoicesequencemanyToOneschema_JoinColumn_TjoinColumn_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.JoinColumn.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasAttr_Region_XsdtString_ struct {
-	Region xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping region,attr"`
 }
 
 type TcacheUsageType xsdt.Token
-
-//	Returns true if the value of this enumerated TcacheUsageType is "READ_ONLY".
-func (me TcacheUsageType) IsReadOnly() bool { return me.String() == "READ_ONLY" }
-
-//	Returns true if the value of this enumerated TcacheUsageType is "READ_WRITE".
-func (me TcacheUsageType) IsReadWrite() bool { return me.String() == "READ_WRITE" }
-
-//	Returns true if the value of this enumerated TcacheUsageType is "NONSTRICT_READ_WRITE".
-func (me TcacheUsageType) IsNonstrictReadWrite() bool { return me.String() == "NONSTRICT_READ_WRITE" }
 
 //	Since TcacheUsageType is just a simple String type, this merely sets the current value from the specified string.
 func (me *TcacheUsageType) Set(s string) { (*xsdt.Token)(me).Set(s) }
@@ -637,14 +35,27 @@ func (me TcacheUsageType) String() string { return xsdt.Token(me).String() }
 //	This convenience method just performs a simple type conversion to TcacheUsageType's alias type xsdt.Token.
 func (me TcacheUsageType) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
 
+//	Returns true if the value of this enumerated TcacheUsageType is "READ_ONLY".
+func (me TcacheUsageType) IsReadOnly() bool { return me.String() == "READ_ONLY" }
+
+//	Returns true if the value of this enumerated TcacheUsageType is "READ_WRITE".
+func (me TcacheUsageType) IsReadWrite() bool { return me.String() == "READ_WRITE" }
+
+//	Returns true if the value of this enumerated TcacheUsageType is "NONSTRICT_READ_WRITE".
+func (me TcacheUsageType) IsNonstrictReadWrite() bool { return me.String() == "NONSTRICT_READ_WRITE" }
+
 type XsdGoPkgHasAttr_Usage_TcacheUsageType_ struct {
 	Usage TcacheUsageType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping usage,attr"`
 }
 
-type Tcache struct {
-	XsdGoPkgHasAttr_Usage_TcacheUsageType_
+type XsdGoPkgHasAttr_Region_XsdtString_ struct {
+	Region xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping region,attr"`
+}
 
+type Tcache struct {
 	XsdGoPkgHasAttr_Region_XsdtString_
+
+	XsdGoPkgHasAttr_Usage_TcacheUsageType_
 }
 
 //	If the WalkHandlers.Tcache function is not nil (ie. was set by outside code), calls it with this Tcache instance as the single argument. Then calls the Walk() method on 0/2 embed(s) and 0/0 field(s) belonging to this Tcache instance.
@@ -664,13 +75,13 @@ func (me *Tcache) Walk() (err error) {
 	return
 }
 
-type XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_ struct {
+type XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_ struct {
 	Cache *Tcache `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cache"`
 }
 
-//	If the WalkHandlers.XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_ instance.
-func (me *XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_ instance.
+func (me *XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
@@ -688,585 +99,14 @@ func (me *XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_) Walk() (er
 	return
 }
 
-type TemptyType struct {
-}
-
-//	If the WalkHandlers.TemptyType function is not nil (ie. was set by outside code), calls it with this TemptyType instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/0 field(s) belonging to this TemptyType instance.
-func (me *TemptyType) Walk() (err error) {
-	if fn := WalkHandlers.TemptyType; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ struct {
-	CascadeAll *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-all"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ instance.
-func (me *XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.CascadeAll.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ struct {
-	CascadePersist *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-persist"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ instance.
-func (me *XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.CascadePersist.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ struct {
-	CascadeMerge *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-merge"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ instance.
-func (me *XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.CascadeMerge.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ struct {
-	CascadeRemove *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-remove"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ instance.
-func (me *XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.CascadeRemove.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ struct {
-	CascadeRefresh *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-refresh"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ instance.
-func (me *XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.CascadeRefresh.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ struct {
-	CascadeDetach *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-detach"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ instance.
-func (me *XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.CascadeDetach.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type TcascadeType struct {
-	XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_
-
-	XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_
-
-	XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_
-
-	XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_
-
-	XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_
-
-	XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_
-}
-
-//	If the WalkHandlers.TcascadeType function is not nil (ie. was set by outside code), calls it with this TcascadeType instance as the single argument. Then calls the Walk() method on 6/6 embed(s) and 0/0 field(s) belonging to this TcascadeType instance.
-func (me *TcascadeType) Walk() (err error) {
-	if fn := WalkHandlers.TcascadeType; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_ struct {
-	Cascade *TcascadeType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_ instance.
-func (me *XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.Cascade.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasAttr_Field_XsdtNmtoken_ struct {
-	Field xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field,attr"`
-}
-
-type XsdGoPkgHasAttr_OrphanRemoval_XsdtBoolean_False struct {
-	OrphanRemoval xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping orphan-removal,attr"`
-}
-
-//	Returns the default value for OrphanRemoval -- false
-func (me XsdGoPkgHasAttr_OrphanRemoval_XsdtBoolean_False) OrphanRemovalDefault() xsdt.Boolean {
-	return xsdt.Boolean(false)
-}
-
-type XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_ struct {
-	JoinColumns []*TjoinColumn `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-column"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_ instance.
-func (me *XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.JoinColumns {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type TjoinColumns struct {
-	XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_
-}
-
-//	If the WalkHandlers.TjoinColumns function is not nil (ie. was set by outside code), calls it with this TjoinColumns instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this TjoinColumns instance.
-func (me *TjoinColumns) Walk() (err error) {
-	if fn := WalkHandlers.TjoinColumns; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_ struct {
-	JoinColumns *TjoinColumns `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-columns"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_ instance.
-func (me *XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.JoinColumns.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasAttr_TargetEntity_XsdtString_ struct {
-	TargetEntity xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping target-entity,attr"`
-}
-
-type TfetchType xsdt.Token
-
-//	Since TfetchType is just a simple String type, this merely sets the current value from the specified string.
-func (me *TfetchType) Set(s string) { (*xsdt.Token)(me).Set(s) }
-
-//	Since TfetchType is just a simple String type, this merely returns the current string value.
-func (me TfetchType) String() string { return xsdt.Token(me).String() }
-
-//	This convenience method just performs a simple type conversion to TfetchType's alias type xsdt.Token.
-func (me TfetchType) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
-
-//	Returns true if the value of this enumerated TfetchType is "EAGER".
-func (me TfetchType) IsEager() bool { return me.String() == "EAGER" }
-
-//	Returns true if the value of this enumerated TfetchType is "LAZY".
-func (me TfetchType) IsLazy() bool { return me.String() == "LAZY" }
-
-//	Returns true if the value of this enumerated TfetchType is "EXTRA_LAZY".
-func (me TfetchType) IsExtraLazy() bool { return me.String() == "EXTRA_LAZY" }
-
-type XsdGoPkgHasAttr_Fetch_TfetchType_Lazy struct {
-	Fetch TfetchType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping fetch,attr"`
-}
-
-//	Returns the default value for Fetch -- "LAZY"
-func (me XsdGoPkgHasAttr_Fetch_TfetchType_Lazy) FetchDefault() TfetchType { return TfetchType("LAZY") }
-
-type XsdGoPkgHasAttr_InversedBy_XsdtNmtoken_ struct {
-	InversedBy xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping inversed-by,attr"`
-}
-
-type TmanyToOne struct {
-	XsdGoPkgHasAttr_OrphanRemoval_XsdtBoolean_False
-
-	XsdGoPkgHasElem_JoinColumnchoicesequencemanyToOneschema_JoinColumn_TjoinColumn_
-
-	XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_
-
-	XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_
-
-	XsdGoPkgHasAttr_Field_XsdtNmtoken_
-
-	XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_
-
-	XsdGoPkgHasAttr_TargetEntity_XsdtString_
-
-	XsdGoPkgHasAttr_Fetch_TfetchType_Lazy
-
-	XsdGoPkgHasAttr_InversedBy_XsdtNmtoken_
-}
-
-//	If the WalkHandlers.TmanyToOne function is not nil (ie. was set by outside code), calls it with this TmanyToOne instance as the single argument. Then calls the Walk() method on 4/9 embed(s) and 0/0 field(s) belonging to this TmanyToOne instance.
-func (me *TmanyToOne) Walk() (err error) {
-	if fn := WalkHandlers.TmanyToOne; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_JoinColumnchoicesequencemanyToOneschema_JoinColumn_TjoinColumn_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ struct {
-	ManyToOnes []*TmanyToOne `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping many-to-one"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ instance.
-func (me *XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.ManyToOnes {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type TinheritanceType xsdt.Token
-
-//	Returns true if the value of this enumerated TinheritanceType is "JOINED".
-func (me TinheritanceType) IsJoined() bool { return me.String() == "JOINED" }
-
-//	Returns true if the value of this enumerated TinheritanceType is "TABLE_PER_CLASS".
-func (me TinheritanceType) IsTablePerClass() bool { return me.String() == "TABLE_PER_CLASS" }
-
-//	Since TinheritanceType is just a simple String type, this merely sets the current value from the specified string.
-func (me *TinheritanceType) Set(s string) { (*xsdt.Token)(me).Set(s) }
-
-//	Since TinheritanceType is just a simple String type, this merely returns the current string value.
-func (me TinheritanceType) String() string { return xsdt.Token(me).String() }
-
-//	This convenience method just performs a simple type conversion to TinheritanceType's alias type xsdt.Token.
-func (me TinheritanceType) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
-
-//	Returns true if the value of this enumerated TinheritanceType is "SINGLE_TABLE".
-func (me TinheritanceType) IsSingleTable() bool { return me.String() == "SINGLE_TABLE" }
-
-type XsdGoPkgHasAttr_InheritanceType_TinheritanceType_ struct {
-	InheritanceType TinheritanceType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping inheritance-type,attr"`
-}
-
-type XsdGoPkgHasAttr_Schema_XsdtNmtoken_ struct {
-	Schema xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping schema,attr"`
-}
-
-type XsdGoPkgHasAttr_Columns_XsdtString_ struct {
-	Columns xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping columns,attr"`
-}
-
-type XsdGoPkgHasAttr_Flags_XsdtString_ struct {
-	Flags xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping flags,attr"`
-}
-
-type Tindex struct {
-	XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_
-
-	XsdGoPkgHasAttr_Columns_XsdtString_
-
-	XsdGoPkgHasAttr_Flags_XsdtString_
-
-	XsdGoPkgHasAttr_Name_XsdtNmtoken_
-}
-
-//	If the WalkHandlers.Tindex function is not nil (ie. was set by outside code), calls it with this Tindex instance as the single argument. Then calls the Walk() method on 1/4 embed(s) and 0/0 field(s) belonging to this Tindex instance.
-func (me *Tindex) Walk() (err error) {
-	if fn := WalkHandlers.Tindex; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_ struct {
-	Indexs []*Tindex `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping index"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_ instance.
-func (me *XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.Indexs {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type Tindexes struct {
-	XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_
-}
-
-//	If the WalkHandlers.Tindexes function is not nil (ie. was set by outside code), calls it with this Tindexes instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this Tindexes instance.
-func (me *Tindexes) Walk() (err error) {
-	if fn := WalkHandlers.Tindexes; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_ struct {
-	Indexes *Tindexes `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping indexes"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_ instance.
-func (me *XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.Indexes.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasAttr_MappedBy_XsdtNmtoken_ struct {
-	MappedBy xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping mapped-by,attr"`
+type XsdGoPkgHasAttr_Name_XsdtNmtoken_ struct {
+	Name xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping name,attr"`
 }
 
 type TorderByDirection xsdt.Token
+
+//	Returns true if the value of this enumerated TorderByDirection is "DESC".
+func (me TorderByDirection) IsDesc() bool { return me.String() == "DESC" }
 
 //	Since TorderByDirection is just a simple String type, this merely sets the current value from the specified string.
 func (me *TorderByDirection) Set(s string) { (*xsdt.Token)(me).Set(s) }
@@ -1279,9 +119,6 @@ func (me TorderByDirection) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
 
 //	Returns true if the value of this enumerated TorderByDirection is "ASC".
 func (me TorderByDirection) IsAsc() bool { return me.String() == "ASC" }
-
-//	Returns true if the value of this enumerated TorderByDirection is "DESC".
-func (me TorderByDirection) IsDesc() bool { return me.String() == "DESC" }
 
 type XsdGoPkgHasAttr_Direction_TorderByDirection_Asc struct {
 	Direction TorderByDirection `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping direction,attr"`
@@ -1365,13 +202,13 @@ func (me *TorderBy) Walk() (err error) {
 	return
 }
 
-type XsdGoPkgHasElem_OrderBysequenceoneToManyschema_OrderBy_TorderBy_ struct {
+type XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ struct {
 	OrderBy *TorderBy `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping order-by"`
 }
 
-//	If the WalkHandlers.XsdGoPkgHasElem_OrderBysequenceoneToManyschema_OrderBy_TorderBy_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OrderBysequenceoneToManyschema_OrderBy_TorderBy_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OrderBysequenceoneToManyschema_OrderBy_TorderBy_ instance.
-func (me *XsdGoPkgHasElem_OrderBysequenceoneToManyschema_OrderBy_TorderBy_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_OrderBysequenceoneToManyschema_OrderBy_TorderBy_; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ instance.
+func (me *XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
@@ -1389,45 +226,78 @@ func (me *XsdGoPkgHasElem_OrderBysequenceoneToManyschema_OrderBy_TorderBy_) Walk
 	return
 }
 
-type XsdGoPkgHasAttr_IndexBy_XsdtNmtoken_ struct {
-	IndexBy xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping index-by,attr"`
+type XsdGoPkgHasAttr_MappedBy_XsdtNmtoken_ struct {
+	MappedBy xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping mapped-by,attr"`
 }
 
-type ToneToMany struct {
-	XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_
-
-	XsdGoPkgHasAttr_Field_XsdtNmtoken_
-
-	XsdGoPkgHasAttr_IndexBy_XsdtNmtoken_
-
-	XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_
-
-	XsdGoPkgHasElem_OrderBysequenceoneToManyschema_OrderBy_TorderBy_
-
-	XsdGoPkgHasAttr_OrphanRemoval_XsdtBoolean_False
-
-	XsdGoPkgHasAttr_Fetch_TfetchType_Lazy
-
-	XsdGoPkgHasAttr_TargetEntity_XsdtString_
-
-	XsdGoPkgHasAttr_MappedBy_XsdtNmtoken_
+type XsdGoPkgHasAttr_Field_XsdtNmtoken_ struct {
+	Field xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field,attr"`
 }
 
-//	If the WalkHandlers.ToneToMany function is not nil (ie. was set by outside code), calls it with this ToneToMany instance as the single argument. Then calls the Walk() method on 3/9 embed(s) and 0/0 field(s) belonging to this ToneToMany instance.
-func (me *ToneToMany) Walk() (err error) {
-	if fn := WalkHandlers.ToneToMany; me != nil {
+type XsdGoPkgHasAttr_InversedBy_XsdtNmtoken_ struct {
+	InversedBy xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping inversed-by,attr"`
+}
+
+type TfetchType xsdt.Token
+
+//	Since TfetchType is just a simple String type, this merely returns the current string value.
+func (me TfetchType) String() string { return xsdt.Token(me).String() }
+
+//	This convenience method just performs a simple type conversion to TfetchType's alias type xsdt.Token.
+func (me TfetchType) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
+
+//	Returns true if the value of this enumerated TfetchType is "EAGER".
+func (me TfetchType) IsEager() bool { return me.String() == "EAGER" }
+
+//	Returns true if the value of this enumerated TfetchType is "LAZY".
+func (me TfetchType) IsLazy() bool { return me.String() == "LAZY" }
+
+//	Returns true if the value of this enumerated TfetchType is "EXTRA_LAZY".
+func (me TfetchType) IsExtraLazy() bool { return me.String() == "EXTRA_LAZY" }
+
+//	Since TfetchType is just a simple String type, this merely sets the current value from the specified string.
+func (me *TfetchType) Set(s string) { (*xsdt.Token)(me).Set(s) }
+
+type XsdGoPkgHasAttr_Fetch_TfetchType_Lazy struct {
+	Fetch TfetchType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping fetch,attr"`
+}
+
+//	Returns the default value for Fetch -- "LAZY"
+func (me XsdGoPkgHasAttr_Fetch_TfetchType_Lazy) FetchDefault() TfetchType { return TfetchType("LAZY") }
+
+type TemptyType struct {
+}
+
+//	If the WalkHandlers.TemptyType function is not nil (ie. was set by outside code), calls it with this TemptyType instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/0 field(s) belonging to this TemptyType instance.
+func (me *TemptyType) Walk() (err error) {
+	if fn := WalkHandlers.TemptyType; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
 		}
-		if err = me.XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
 		}
-		if err = me.XsdGoPkgHasElem_OrderBysequenceoneToManyschema_OrderBy_TorderBy_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
+	}
+	return
+}
+
+type XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ struct {
+	CascadeRemove *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-remove"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ instance.
+func (me *XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
 		}
-		if err = me.XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.CascadeRemove.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if fn != nil {
@@ -1439,22 +309,349 @@ func (me *ToneToMany) Walk() (err error) {
 	return
 }
 
-type XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_ struct {
-	OneToManies []*ToneToMany `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping one-to-many"`
+type XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ struct {
+	CascadeRefresh *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-refresh"`
 }
 
-//	If the WalkHandlers.XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_ instance.
-func (me *XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ instance.
+func (me *XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
 		}
-		for _, x := range me.OneToManies {
+		if err = me.CascadeRefresh.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ struct {
+	CascadeDetach *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-detach"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ instance.
+func (me *XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.CascadeDetach.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ struct {
+	CascadeAll *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-all"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_ instance.
+func (me *XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.CascadeAll.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ struct {
+	CascadePersist *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-persist"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ instance.
+func (me *XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.CascadePersist.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ struct {
+	CascadeMerge *TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-merge"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ instance.
+func (me *XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.CascadeMerge.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type TcascadeType struct {
+	XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_
+
+	XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_
+
+	XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_
+
+	XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_
+
+	XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_
+
+	XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_
+}
+
+//	If the WalkHandlers.TcascadeType function is not nil (ie. was set by outside code), calls it with this TcascadeType instance as the single argument. Then calls the Walk() method on 6/6 embed(s) and 0/0 field(s) belonging to this TcascadeType instance.
+func (me *TcascadeType) Walk() (err error) {
+	if fn := WalkHandlers.TcascadeType; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_ struct {
+	Cascade *TcascadeType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_ instance.
+func (me *XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.Cascade.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasAttr_ColumnDefinition_XsdtString_ struct {
+	ColumnDefinition xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping column-definition,attr"`
+}
+
+type XsdGoPkgHasAttr_ReferencedColumnName_XsdtNmtoken_Id struct {
+	ReferencedColumnName xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping referenced-column-name,attr"`
+}
+
+//	Returns the default value for ReferencedColumnName -- "id"
+func (me XsdGoPkgHasAttr_ReferencedColumnName_XsdtNmtoken_Id) ReferencedColumnNameDefault() xsdt.Nmtoken {
+	return xsdt.Nmtoken("id")
+}
+
+type XsdGoPkgHasAttr_Unique_XsdtBoolean_False struct {
+	Unique xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping unique,attr"`
+}
+
+//	Returns the default value for Unique -- false
+func (me XsdGoPkgHasAttr_Unique_XsdtBoolean_False) UniqueDefault() xsdt.Boolean {
+	return xsdt.Boolean(false)
+}
+
+type XsdGoPkgHasAttr_Nullable_XsdtBoolean_True struct {
+	Nullable xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping nullable,attr"`
+}
+
+//	Returns the default value for Nullable -- true
+func (me XsdGoPkgHasAttr_Nullable_XsdtBoolean_True) NullableDefault() xsdt.Boolean {
+	return xsdt.Boolean(true)
+}
+
+type TfkAction xsdt.Token
+
+//	Returns true if the value of this enumerated TfkAction is "SET NULL".
+func (me TfkAction) IsSetNull() bool { return me.String() == "SET NULL" }
+
+//	Since TfkAction is just a simple String type, this merely sets the current value from the specified string.
+func (me *TfkAction) Set(s string) { (*xsdt.Token)(me).Set(s) }
+
+//	Since TfkAction is just a simple String type, this merely returns the current string value.
+func (me TfkAction) String() string { return xsdt.Token(me).String() }
+
+//	This convenience method just performs a simple type conversion to TfkAction's alias type xsdt.Token.
+func (me TfkAction) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
+
+//	Returns true if the value of this enumerated TfkAction is "CASCADE".
+func (me TfkAction) IsCascade() bool { return me.String() == "CASCADE" }
+
+//	Returns true if the value of this enumerated TfkAction is "RESTRICT".
+func (me TfkAction) IsRestrict() bool { return me.String() == "RESTRICT" }
+
+type XsdGoPkgHasAttr_OnDelete_TfkAction_ struct {
+	OnDelete TfkAction `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping on-delete,attr"`
+}
+
+type TjoinColumn struct {
+	XsdGoPkgHasAttr_Name_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_ReferencedColumnName_XsdtNmtoken_Id
+
+	XsdGoPkgHasAttr_Unique_XsdtBoolean_False
+
+	XsdGoPkgHasAttr_Nullable_XsdtBoolean_True
+
+	XsdGoPkgHasAttr_OnDelete_TfkAction_
+
+	XsdGoPkgHasAttr_ColumnDefinition_XsdtString_
+}
+
+//	If the WalkHandlers.TjoinColumn function is not nil (ie. was set by outside code), calls it with this TjoinColumn instance as the single argument. Then calls the Walk() method on 0/6 embed(s) and 0/0 field(s) belonging to this TjoinColumn instance.
+func (me *TjoinColumn) Walk() (err error) {
+	if fn := WalkHandlers.TjoinColumn; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_ struct {
+	JoinColumns []*TjoinColumn `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-column"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_ instance.
+func (me *XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.JoinColumns {
 			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type TjoinColumns struct {
+	XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_
+}
+
+//	If the WalkHandlers.TjoinColumns function is not nil (ie. was set by outside code), calls it with this TjoinColumns instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this TjoinColumns instance.
+func (me *TjoinColumns) Walk() (err error) {
+	if fn := WalkHandlers.TjoinColumns; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ struct {
+	JoinColumns *TjoinColumns `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-columns"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ instance.
+func (me *XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.JoinColumns.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
 		}
 		if fn != nil {
 			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
@@ -1489,12 +686,16 @@ func (me *XsdGoPkgHasElem_InverseJoinColumnssequencejoinTableschema_InverseJoinC
 	return
 }
 
+type XsdGoPkgHasAttr_Schema_XsdtNmtoken_ struct {
+	Schema xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping schema,attr"`
+}
+
 type TjoinTable struct {
-	XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_
+	XsdGoPkgHasAttr_Name_XsdtNmtoken_
+
+	XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_
 
 	XsdGoPkgHasElem_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_
-
-	XsdGoPkgHasAttr_Name_XsdtNmtoken_
 
 	XsdGoPkgHasAttr_Schema_XsdtNmtoken_
 }
@@ -1507,10 +708,10 @@ func (me *TjoinTable) Walk() (err error) {
 				return
 			}
 		}
-		if err = me.XsdGoPkgHasElem_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
-		if err = me.XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.XsdGoPkgHasElem_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if fn != nil {
@@ -1546,28 +747,32 @@ func (me *XsdGoPkgHasElem_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable
 	return
 }
 
+type XsdGoPkgHasAttr_TargetEntity_XsdtString_ struct {
+	TargetEntity xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping target-entity,attr"`
+}
+
 type TmanyToMany struct {
-	XsdGoPkgHasElem_OrderBysequenceoneToManyschema_OrderBy_TorderBy_
-
-	XsdGoPkgHasAttr_Fetch_TfetchType_Lazy
-
-	XsdGoPkgHasAttr_OrphanRemoval_XsdtBoolean_False
-
-	XsdGoPkgHasAttr_TargetEntity_XsdtString_
-
-	XsdGoPkgHasAttr_MappedBy_XsdtNmtoken_
-
-	XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_
+	XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_
 
 	XsdGoPkgHasElem_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_
 
-	XsdGoPkgHasAttr_IndexBy_XsdtNmtoken_
+	XsdGoPkgHasAttr_TargetEntity_XsdtString_
+
+	XsdGoPkgHasAttr_Field_XsdtNmtoken_
 
 	XsdGoPkgHasAttr_InversedBy_XsdtNmtoken_
 
-	XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_
+	XsdGoPkgHasAttr_Fetch_TfetchType_Lazy
 
-	XsdGoPkgHasAttr_Field_XsdtNmtoken_
+	XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_
+
+	XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_
+
+	XsdGoPkgHasAttr_MappedBy_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_IndexBy_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_OrphanRemoval_XsdtBoolean_False
 }
 
 //	If the WalkHandlers.TmanyToMany function is not nil (ie. was set by outside code), calls it with this TmanyToMany instance as the single argument. Then calls the Walk() method on 4/11 embed(s) and 0/0 field(s) belonging to this TmanyToMany instance.
@@ -1578,16 +783,16 @@ func (me *TmanyToMany) Walk() (err error) {
 				return
 			}
 		}
-		if err = me.XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if err = me.XsdGoPkgHasElem_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_OrderBysequenceoneToManyschema_OrderBy_TorderBy_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if fn != nil {
@@ -1615,310 +820,6 @@ func (me *XsdGoPkgHasElems_ManyToManysequenceentityschema_ManyToMany_TmanyToMany
 			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type TchangeTrackingPolicy xsdt.Token
-
-//	Returns true if the value of this enumerated TchangeTrackingPolicy is "DEFERRED_IMPLICIT".
-func (me TchangeTrackingPolicy) IsDeferredImplicit() bool { return me.String() == "DEFERRED_IMPLICIT" }
-
-//	Returns true if the value of this enumerated TchangeTrackingPolicy is "DEFERRED_EXPLICIT".
-func (me TchangeTrackingPolicy) IsDeferredExplicit() bool { return me.String() == "DEFERRED_EXPLICIT" }
-
-//	Returns true if the value of this enumerated TchangeTrackingPolicy is "NOTIFY".
-func (me TchangeTrackingPolicy) IsNotify() bool { return me.String() == "NOTIFY" }
-
-//	Since TchangeTrackingPolicy is just a simple String type, this merely sets the current value from the specified string.
-func (me *TchangeTrackingPolicy) Set(s string) { (*xsdt.Token)(me).Set(s) }
-
-//	Since TchangeTrackingPolicy is just a simple String type, this merely returns the current string value.
-func (me TchangeTrackingPolicy) String() string { return xsdt.Token(me).String() }
-
-//	This convenience method just performs a simple type conversion to TchangeTrackingPolicy's alias type xsdt.Token.
-func (me TchangeTrackingPolicy) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
-
-type XsdGoPkgHasAttr_ChangeTrackingPolicy_TchangeTrackingPolicy_ struct {
-	ChangeTrackingPolicy TchangeTrackingPolicy `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping change-tracking-policy,attr"`
-}
-
-type ToneToOne struct {
-	XsdGoPkgHasAttr_Fetch_TfetchType_Lazy
-
-	XsdGoPkgHasElem_JoinColumnchoicesequencemanyToOneschema_JoinColumn_TjoinColumn_
-
-	XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_
-
-	XsdGoPkgHasAttr_TargetEntity_XsdtString_
-
-	XsdGoPkgHasAttr_MappedBy_XsdtNmtoken_
-
-	XsdGoPkgHasAttr_InversedBy_XsdtNmtoken_
-
-	XsdGoPkgHasAttr_OrphanRemoval_XsdtBoolean_False
-
-	XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_
-
-	XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_
-
-	XsdGoPkgHasAttr_Field_XsdtNmtoken_
-}
-
-//	If the WalkHandlers.ToneToOne function is not nil (ie. was set by outside code), calls it with this ToneToOne instance as the single argument. Then calls the Walk() method on 4/10 embed(s) and 0/0 field(s) belonging to this ToneToOne instance.
-func (me *ToneToOne) Walk() (err error) {
-	if fn := WalkHandlers.ToneToOne; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElem_JoinColumnchoicesequencemanyToOneschema_JoinColumn_TjoinColumn_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_ struct {
-	OneToOnes []*ToneToOne `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping one-to-one"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_ instance.
-func (me *XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.OneToOnes {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type TuniqueConstraint struct {
-	XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_
-
-	XsdGoPkgHasAttr_Columns_XsdtString_
-
-	XsdGoPkgHasAttr_Name_XsdtNmtoken_
-}
-
-//	If the WalkHandlers.TuniqueConstraint function is not nil (ie. was set by outside code), calls it with this TuniqueConstraint instance as the single argument. Then calls the Walk() method on 1/3 embed(s) and 0/0 field(s) belonging to this TuniqueConstraint instance.
-func (me *TuniqueConstraint) Walk() (err error) {
-	if fn := WalkHandlers.TuniqueConstraint; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ struct {
-	UniqueConstraints []*TuniqueConstraint `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping unique-constraint"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ instance.
-func (me *XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.UniqueConstraints {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type TuniqueConstraints struct {
-	XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_
-}
-
-//	If the WalkHandlers.TuniqueConstraints function is not nil (ie. was set by outside code), calls it with this TuniqueConstraints instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this TuniqueConstraints instance.
-func (me *TuniqueConstraints) Walk() (err error) {
-	if fn := WalkHandlers.TuniqueConstraints; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ struct {
-	UniqueConstraints *TuniqueConstraints `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping unique-constraints"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ instance.
-func (me *XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.UniqueConstraints.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasAttr_Value_XsdtNmtoken_ struct {
-	Value xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping value,attr"`
-}
-
-type TdiscriminatorMapping struct {
-	XsdGoPkgHasAttr_Value_XsdtNmtoken_
-
-	XsdGoPkgHasAttr_Class_XsdtString_
-}
-
-//	If the WalkHandlers.TdiscriminatorMapping function is not nil (ie. was set by outside code), calls it with this TdiscriminatorMapping instance as the single argument. Then calls the Walk() method on 0/2 embed(s) and 0/0 field(s) belonging to this TdiscriminatorMapping instance.
-func (me *TdiscriminatorMapping) Walk() (err error) {
-	if fn := WalkHandlers.TdiscriminatorMapping; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ struct {
-	DiscriminatorMappings []*TdiscriminatorMapping `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-mapping"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ instance.
-func (me *XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.DiscriminatorMappings {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type TdiscriminatorMap struct {
-	XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_
-}
-
-//	If the WalkHandlers.TdiscriminatorMap function is not nil (ie. was set by outside code), calls it with this TdiscriminatorMap instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this TdiscriminatorMap instance.
-func (me *TdiscriminatorMap) Walk() (err error) {
-	if fn := WalkHandlers.TdiscriminatorMap; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ struct {
-	DiscriminatorMap *TdiscriminatorMap `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-map"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ instance.
-func (me *XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.DiscriminatorMap.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
 		}
 		if fn != nil {
 			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
@@ -1977,7 +878,7 @@ func (me *XsdGoPkgHasElem_InversedBysequenceassociationOverrideschema_InversedBy
 type TassociationOverride struct {
 	XsdGoPkgHasElem_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_
 
-	XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_
+	XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_
 
 	XsdGoPkgHasElem_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_
 
@@ -1992,13 +893,13 @@ func (me *TassociationOverride) Walk() (err error) {
 				return
 			}
 		}
-		if err = me.XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
 		if err = me.XsdGoPkgHasElem_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if err = me.XsdGoPkgHasElem_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if fn != nil {
@@ -2086,205 +987,12 @@ func (me *XsdGoPkgHasElems_AssociationOverridessequenceentityschema_AssociationO
 	return
 }
 
-type XsdGoPkgHasAttr_ReadOnly_XsdtBoolean_False struct {
-	ReadOnly xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping read-only,attr"`
+type XsdGoPkgHasAttr_Table_XsdtNmtoken_ struct {
+	Table xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping table,attr"`
 }
 
-//	Returns the default value for ReadOnly -- false
-func (me XsdGoPkgHasAttr_ReadOnly_XsdtBoolean_False) ReadOnlyDefault() xsdt.Boolean {
-	return xsdt.Boolean(false)
-}
-
-type XsdGoPkgHasAttr_Method_XsdtNmtoken_ struct {
-	Method xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping method,attr"`
-}
-
-type TlifecycleCallbackType xsdt.Token
-
-//	Returns true if the value of this enumerated TlifecycleCallbackType is "postRemove".
-func (me TlifecycleCallbackType) IsPostRemove() bool { return me.String() == "postRemove" }
-
-//	Returns true if the value of this enumerated TlifecycleCallbackType is "postLoad".
-func (me TlifecycleCallbackType) IsPostLoad() bool { return me.String() == "postLoad" }
-
-//	Since TlifecycleCallbackType is just a simple String type, this merely sets the current value from the specified string.
-func (me *TlifecycleCallbackType) Set(s string) { (*xsdt.Token)(me).Set(s) }
-
-//	Since TlifecycleCallbackType is just a simple String type, this merely returns the current string value.
-func (me TlifecycleCallbackType) String() string { return xsdt.Token(me).String() }
-
-//	Returns true if the value of this enumerated TlifecycleCallbackType is "prePersist".
-func (me TlifecycleCallbackType) IsPrePersist() bool { return me.String() == "prePersist" }
-
-//	Returns true if the value of this enumerated TlifecycleCallbackType is "postUpdate".
-func (me TlifecycleCallbackType) IsPostUpdate() bool { return me.String() == "postUpdate" }
-
-//	Returns true if the value of this enumerated TlifecycleCallbackType is "preRemove".
-func (me TlifecycleCallbackType) IsPreRemove() bool { return me.String() == "preRemove" }
-
-//	This convenience method just performs a simple type conversion to TlifecycleCallbackType's alias type xsdt.Token.
-func (me TlifecycleCallbackType) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
-
-//	Returns true if the value of this enumerated TlifecycleCallbackType is "postPersist".
-func (me TlifecycleCallbackType) IsPostPersist() bool { return me.String() == "postPersist" }
-
-//	Returns true if the value of this enumerated TlifecycleCallbackType is "preUpdate".
-func (me TlifecycleCallbackType) IsPreUpdate() bool { return me.String() == "preUpdate" }
-
-//	Returns true if the value of this enumerated TlifecycleCallbackType is "preFlush".
-func (me TlifecycleCallbackType) IsPreFlush() bool { return me.String() == "preFlush" }
-
-type XsdGoPkgHasAttr_Type_TlifecycleCallbackType_ struct {
-	Type TlifecycleCallbackType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping type,attr"`
-}
-
-type TlifecycleCallback struct {
-	XsdGoPkgHasAttr_Method_XsdtNmtoken_
-
-	XsdGoPkgHasAttr_Type_TlifecycleCallbackType_
-}
-
-//	If the WalkHandlers.TlifecycleCallback function is not nil (ie. was set by outside code), calls it with this TlifecycleCallback instance as the single argument. Then calls the Walk() method on 0/2 embed(s) and 0/0 field(s) belonging to this TlifecycleCallback instance.
-func (me *TlifecycleCallback) Walk() (err error) {
-	if fn := WalkHandlers.TlifecycleCallback; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_LifecycleCallbacksequenceentityListenerschema_LifecycleCallback_TlifecycleCallback_ struct {
-	LifecycleCallbacks []*TlifecycleCallback `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping lifecycle-callback"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_LifecycleCallbacksequenceentityListenerschema_LifecycleCallback_TlifecycleCallback_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_LifecycleCallbacksequenceentityListenerschema_LifecycleCallback_TlifecycleCallback_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_LifecycleCallbacksequenceentityListenerschema_LifecycleCallback_TlifecycleCallback_ instance.
-func (me *XsdGoPkgHasElems_LifecycleCallbacksequenceentityListenerschema_LifecycleCallback_TlifecycleCallback_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_LifecycleCallbacksequenceentityListenerschema_LifecycleCallback_TlifecycleCallback_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.LifecycleCallbacks {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type TentityListener struct {
-	XsdGoPkgHasElems_LifecycleCallbacksequenceentityListenerschema_LifecycleCallback_TlifecycleCallback_
-
-	XsdGoPkgHasAttr_Class_XsdtString_
-}
-
-//	If the WalkHandlers.TentityListener function is not nil (ie. was set by outside code), calls it with this TentityListener instance as the single argument. Then calls the Walk() method on 1/2 embed(s) and 0/0 field(s) belonging to this TentityListener instance.
-func (me *TentityListener) Walk() (err error) {
-	if fn := WalkHandlers.TentityListener; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElems_LifecycleCallbacksequenceentityListenerschema_LifecycleCallback_TlifecycleCallback_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ struct {
-	EntityListeners []*TentityListener `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-listener"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ instance.
-func (me *XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.EntityListeners {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type TentityListeners struct {
-	XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_
-}
-
-//	If the WalkHandlers.TentityListeners function is not nil (ie. was set by outside code), calls it with this TentityListeners instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this TentityListeners instance.
-func (me *TentityListeners) Walk() (err error) {
-	if fn := WalkHandlers.TentityListeners; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ struct {
-	EntityListeners *TentityListeners `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-listeners"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ instance.
-func (me *XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.EntityListeners.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
+type XsdGoPkgHasAttr_Name_XsdtString_ struct {
+	Name xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping name,attr"`
 }
 
 type XsdGoPkgHasAttr_Query_XsdtString_ struct {
@@ -2292,9 +1000,9 @@ type XsdGoPkgHasAttr_Query_XsdtString_ struct {
 }
 
 type TnamedQuery struct {
-	XsdGoPkgHasAttr_Query_XsdtString_
-
 	XsdGoPkgHasAttr_Name_XsdtString_
+
+	XsdGoPkgHasAttr_Query_XsdtString_
 }
 
 //	If the WalkHandlers.TnamedQuery function is not nil (ie. was set by outside code), calls it with this TnamedQuery instance as the single argument. Then calls the Walk() method on 0/2 embed(s) and 0/0 field(s) belonging to this TnamedQuery instance.
@@ -2450,11 +1158,11 @@ type XsdGoPkgHasAttr_DiscriminatorColumn_XsdtString_ struct {
 }
 
 type TentityResult struct {
-	XsdGoPkgHasAttr_DiscriminatorColumn_XsdtString_
-
 	XsdGoPkgHasElems_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_
 
 	XsdGoPkgHasAttr_EntityClass_XsdtString_
+
+	XsdGoPkgHasAttr_DiscriminatorColumn_XsdtString_
 }
 
 //	If the WalkHandlers.TentityResult function is not nil (ie. was set by outside code), calls it with this TentityResult instance as the single argument. Then calls the Walk() method on 1/3 embed(s) and 0/0 field(s) belonging to this TentityResult instance.
@@ -2657,40 +1365,71 @@ func (me *XsdGoPkgHasElems_SqlResultSetMappingssequenceentityschema_SqlResultSet
 	return
 }
 
-type Tfield struct {
-	XsdGoPkgHasAttr_Name_XsdtNmtoken_
-
-	XsdGoPkgHasAttr_Type_XsdtNmtoken_String
-
-	XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_
-
-	XsdGoPkgHasAttr_Version_XsdtBoolean_
-
-	XsdGoPkgHasAttr_Precision_XsdtInteger_
-
-	XsdGoPkgHasAttr_Scale_XsdtInteger_
-
-	XsdGoPkgHasAttr_ColumnDefinition_XsdtString_
-
-	XsdGoPkgHasAttr_Column_XsdtNmtoken_
-
-	XsdGoPkgHasAttr_Length_XsdtNmtoken_
-
-	XsdGoPkgHasAttr_Unique_XsdtBoolean_False
-
-	XsdGoPkgHasAttr_Nullable_XsdtBoolean_False
+type XsdGoPkgHasAttr_ReadOnly_XsdtBoolean_False struct {
+	ReadOnly xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping read-only,attr"`
 }
 
-//	If the WalkHandlers.Tfield function is not nil (ie. was set by outside code), calls it with this Tfield instance as the single argument. Then calls the Walk() method on 1/11 embed(s) and 0/0 field(s) belonging to this Tfield instance.
-func (me *Tfield) Walk() (err error) {
-	if fn := WalkHandlers.Tfield; me != nil {
+//	Returns the default value for ReadOnly -- false
+func (me XsdGoPkgHasAttr_ReadOnly_XsdtBoolean_False) ReadOnlyDefault() xsdt.Boolean {
+	return xsdt.Boolean(false)
+}
+
+type TlifecycleCallbackType xsdt.Token
+
+//	Returns true if the value of this enumerated TlifecycleCallbackType is "postPersist".
+func (me TlifecycleCallbackType) IsPostPersist() bool { return me.String() == "postPersist" }
+
+//	Returns true if the value of this enumerated TlifecycleCallbackType is "preUpdate".
+func (me TlifecycleCallbackType) IsPreUpdate() bool { return me.String() == "preUpdate" }
+
+//	Returns true if the value of this enumerated TlifecycleCallbackType is "postUpdate".
+func (me TlifecycleCallbackType) IsPostUpdate() bool { return me.String() == "postUpdate" }
+
+//	Returns true if the value of this enumerated TlifecycleCallbackType is "preRemove".
+func (me TlifecycleCallbackType) IsPreRemove() bool { return me.String() == "preRemove" }
+
+//	Returns true if the value of this enumerated TlifecycleCallbackType is "postRemove".
+func (me TlifecycleCallbackType) IsPostRemove() bool { return me.String() == "postRemove" }
+
+//	Since TlifecycleCallbackType is just a simple String type, this merely sets the current value from the specified string.
+func (me *TlifecycleCallbackType) Set(s string) { (*xsdt.Token)(me).Set(s) }
+
+//	Returns true if the value of this enumerated TlifecycleCallbackType is "prePersist".
+func (me TlifecycleCallbackType) IsPrePersist() bool { return me.String() == "prePersist" }
+
+//	Returns true if the value of this enumerated TlifecycleCallbackType is "postLoad".
+func (me TlifecycleCallbackType) IsPostLoad() bool { return me.String() == "postLoad" }
+
+//	Returns true if the value of this enumerated TlifecycleCallbackType is "preFlush".
+func (me TlifecycleCallbackType) IsPreFlush() bool { return me.String() == "preFlush" }
+
+//	Since TlifecycleCallbackType is just a simple String type, this merely returns the current string value.
+func (me TlifecycleCallbackType) String() string { return xsdt.Token(me).String() }
+
+//	This convenience method just performs a simple type conversion to TlifecycleCallbackType's alias type xsdt.Token.
+func (me TlifecycleCallbackType) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
+
+type XsdGoPkgHasAttr_Type_TlifecycleCallbackType_ struct {
+	Type TlifecycleCallbackType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping type,attr"`
+}
+
+type XsdGoPkgHasAttr_Method_XsdtNmtoken_ struct {
+	Method xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping method,attr"`
+}
+
+type TlifecycleCallback struct {
+	XsdGoPkgHasAttr_Type_TlifecycleCallbackType_
+
+	XsdGoPkgHasAttr_Method_XsdtNmtoken_
+}
+
+//	If the WalkHandlers.TlifecycleCallback function is not nil (ie. was set by outside code), calls it with this TlifecycleCallback instance as the single argument. Then calls the Walk() method on 0/2 embed(s) and 0/0 field(s) belonging to this TlifecycleCallback instance.
+func (me *TlifecycleCallback) Walk() (err error) {
+	if fn := WalkHandlers.TlifecycleCallback; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
-		}
-		if err = me.XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
 		}
 		if fn != nil {
 			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
@@ -2701,19 +1440,19 @@ func (me *Tfield) Walk() (err error) {
 	return
 }
 
-type XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_ struct {
-	Fields []*Tfield `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field"`
+type XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ struct {
+	LifecycleCallbacks []*TlifecycleCallback `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping lifecycle-callback"`
 }
 
-//	If the WalkHandlers.XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_ instance.
-func (me *XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ instance.
+func (me *XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
 		}
-		for _, x := range me.Fields {
+		for _, x := range me.LifecycleCallbacks {
 			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
@@ -2727,12 +1466,8 @@ func (me *XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_) Walk() (err 
 	return
 }
 
-type XsdGoPkgHasAttr_Table_XsdtNmtoken_ struct {
-	Table xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping table,attr"`
-}
-
 type TlifecycleCallbacks struct {
-	XsdGoPkgHasElems_LifecycleCallbacksequenceentityListenerschema_LifecycleCallback_TlifecycleCallback_
+	XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_
 }
 
 //	If the WalkHandlers.TlifecycleCallbacks function is not nil (ie. was set by outside code), calls it with this TlifecycleCallbacks instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this TlifecycleCallbacks instance.
@@ -2743,7 +1478,7 @@ func (me *TlifecycleCallbacks) Walk() (err error) {
 				return
 			}
 		}
-		if err = me.XsdGoPkgHasElems_LifecycleCallbacksequenceentityListenerschema_LifecycleCallback_TlifecycleCallback_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if fn != nil {
@@ -2779,10 +1514,6 @@ func (me *XsdGoPkgHasElem_LifecycleCallbackssequenceentityschema_LifecycleCallba
 	return
 }
 
-type XsdGoPkgHasAttr_RepositoryClass_XsdtString_ struct {
-	RepositoryClass xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping repository-class,attr"`
-}
-
 type XsdGoPkgHasElem_QuerysequencenamedNativeQueryschema_Query_XsdtString_ struct {
 	Query xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping query"`
 }
@@ -2804,22 +1535,22 @@ func (me *XsdGoPkgHasElem_QuerysequencenamedNativeQueryschema_Query_XsdtString_)
 	return
 }
 
-type XsdGoPkgHasAttr_ResultSetMapping_XsdtString_ struct {
-	ResultSetMapping xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping result-set-mapping,attr"`
-}
-
 type XsdGoPkgHasAttr_ResultClass_XsdtString_ struct {
 	ResultClass xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping result-class,attr"`
 }
 
-type TnamedNativeQuery struct {
-	XsdGoPkgHasAttr_ResultSetMapping_XsdtString_
+type XsdGoPkgHasAttr_ResultSetMapping_XsdtString_ struct {
+	ResultSetMapping xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping result-set-mapping,attr"`
+}
 
-	XsdGoPkgHasAttr_Name_XsdtString_
+type TnamedNativeQuery struct {
+	XsdGoPkgHasElem_QuerysequencenamedNativeQueryschema_Query_XsdtString_
 
 	XsdGoPkgHasAttr_ResultClass_XsdtString_
 
-	XsdGoPkgHasElem_QuerysequencenamedNativeQueryschema_Query_XsdtString_
+	XsdGoPkgHasAttr_ResultSetMapping_XsdtString_
+
+	XsdGoPkgHasAttr_Name_XsdtString_
 }
 
 //	If the WalkHandlers.TnamedNativeQuery function is not nil (ie. was set by outside code), calls it with this TnamedNativeQuery instance as the single argument. Then calls the Walk() method on 1/4 embed(s) and 0/0 field(s) belonging to this TnamedNativeQuery instance.
@@ -2916,13 +1647,281 @@ func (me *XsdGoPkgHasElem_NamedNativeQueriessequenceentityschema_NamedNativeQuer
 	return
 }
 
+type XsdGoPkgHasCdata struct {
+	XsdGoPkgCDATA string `xml:",chardata"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasCdata function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasCdata instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasCdata instance.
+func (me *XsdGoPkgHasCdata) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasCdata; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_ struct {
+	Options []*Toption `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping option"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_ instance.
+func (me *XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type Toption struct {
+	XsdGoPkgHasCdata
+
+	XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_
+
+	XsdGoPkgHasAttr_Name_XsdtNmtoken_
+}
+
+//	If the WalkHandlers.Toption function is not nil (ie. was set by outside code), calls it with this Toption instance as the single argument. Then calls the Walk() method on 2/3 embed(s) and 0/0 field(s) belonging to this Toption instance.
+func (me *Toption) Walk() (err error) {
+	if fn := WalkHandlers.Toption; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasCdata.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_ struct {
+	Options []*Toption `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping option"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_ instance.
+func (me *XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.Options {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type Toptions struct {
+	XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_
+}
+
+//	If the WalkHandlers.Toptions function is not nil (ie. was set by outside code), calls it with this Toptions instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this Toptions instance.
+func (me *Toptions) Walk() (err error) {
+	if fn := WalkHandlers.Toptions; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_ struct {
+	Options *Toptions `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping options"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_ instance.
+func (me *XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.Options.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasAttr_Columns_XsdtString_ struct {
+	Columns xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping columns,attr"`
+}
+
+type TuniqueConstraint struct {
+	XsdGoPkgHasAttr_Columns_XsdtString_
+
+	XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_
+
+	XsdGoPkgHasAttr_Name_XsdtNmtoken_
+}
+
+//	If the WalkHandlers.TuniqueConstraint function is not nil (ie. was set by outside code), calls it with this TuniqueConstraint instance as the single argument. Then calls the Walk() method on 1/3 embed(s) and 0/0 field(s) belonging to this TuniqueConstraint instance.
+func (me *TuniqueConstraint) Walk() (err error) {
+	if fn := WalkHandlers.TuniqueConstraint; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ struct {
+	UniqueConstraints []*TuniqueConstraint `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping unique-constraint"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ instance.
+func (me *XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.UniqueConstraints {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type TuniqueConstraints struct {
+	XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_
+}
+
+//	If the WalkHandlers.TuniqueConstraints function is not nil (ie. was set by outside code), calls it with this TuniqueConstraints instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this TuniqueConstraints instance.
+func (me *TuniqueConstraints) Walk() (err error) {
+	if fn := WalkHandlers.TuniqueConstraints; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ struct {
+	UniqueConstraints *TuniqueConstraints `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping unique-constraints"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ instance.
+func (me *XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.UniqueConstraints.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
 type TgeneratorStrategy xsdt.Token
 
-//	Since TgeneratorStrategy is just a simple String type, this merely returns the current string value.
-func (me TgeneratorStrategy) String() string { return xsdt.Token(me).String() }
+//	This convenience method just performs a simple type conversion to TgeneratorStrategy's alias type xsdt.Token.
+func (me TgeneratorStrategy) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
+
+//	Returns true if the value of this enumerated TgeneratorStrategy is "UUID".
+func (me TgeneratorStrategy) IsUuid() bool { return me.String() == "UUID" }
+
+//	Returns true if the value of this enumerated TgeneratorStrategy is "CUSTOM".
+func (me TgeneratorStrategy) IsCustom() bool { return me.String() == "CUSTOM" }
+
+//	Returns true if the value of this enumerated TgeneratorStrategy is "IDENTITY".
+func (me TgeneratorStrategy) IsIdentity() bool { return me.String() == "IDENTITY" }
+
+//	Returns true if the value of this enumerated TgeneratorStrategy is "AUTO".
+func (me TgeneratorStrategy) IsAuto() bool { return me.String() == "AUTO" }
 
 //	Since TgeneratorStrategy is just a simple String type, this merely sets the current value from the specified string.
 func (me *TgeneratorStrategy) Set(s string) { (*xsdt.Token)(me).Set(s) }
+
+//	Since TgeneratorStrategy is just a simple String type, this merely returns the current string value.
+func (me TgeneratorStrategy) String() string { return xsdt.Token(me).String() }
 
 //	Returns true if the value of this enumerated TgeneratorStrategy is "NONE".
 func (me TgeneratorStrategy) IsNone() bool { return me.String() == "NONE" }
@@ -2932,21 +1931,6 @@ func (me TgeneratorStrategy) IsTable() bool { return me.String() == "TABLE" }
 
 //	Returns true if the value of this enumerated TgeneratorStrategy is "SEQUENCE".
 func (me TgeneratorStrategy) IsSequence() bool { return me.String() == "SEQUENCE" }
-
-//	Returns true if the value of this enumerated TgeneratorStrategy is "IDENTITY".
-func (me TgeneratorStrategy) IsIdentity() bool { return me.String() == "IDENTITY" }
-
-//	Returns true if the value of this enumerated TgeneratorStrategy is "AUTO".
-func (me TgeneratorStrategy) IsAuto() bool { return me.String() == "AUTO" }
-
-//	Returns true if the value of this enumerated TgeneratorStrategy is "UUID".
-func (me TgeneratorStrategy) IsUuid() bool { return me.String() == "UUID" }
-
-//	Returns true if the value of this enumerated TgeneratorStrategy is "CUSTOM".
-func (me TgeneratorStrategy) IsCustom() bool { return me.String() == "CUSTOM" }
-
-//	This convenience method just performs a simple type conversion to TgeneratorStrategy's alias type xsdt.Token.
-func (me TgeneratorStrategy) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
 
 type XsdGoPkgHasAttr_Strategy_TgeneratorStrategy_Auto struct {
 	Strategy TgeneratorStrategy `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping strategy,attr"`
@@ -3002,13 +1986,12 @@ func (me *XsdGoPkgHasElem_Generatorsequenceidschema_Generator_Tgenerator_) Walk(
 	return
 }
 
-type XsdGoPkgHasAttr_AssociationKey_XsdtBoolean_False struct {
-	AssociationKey xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping association-key,attr"`
+type XsdGoPkgHasAttr_Type_XsdtNmtoken_ struct {
+	Type xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping type,attr"`
 }
 
-//	Returns the default value for AssociationKey -- false
-func (me XsdGoPkgHasAttr_AssociationKey_XsdtBoolean_False) AssociationKeyDefault() xsdt.Boolean {
-	return xsdt.Boolean(false)
+type XsdGoPkgHasAttr_Column_XsdtNmtoken_ struct {
+	Column xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping column,attr"`
 }
 
 type XsdGoPkgHasAttr_SequenceName_XsdtNmtoken_ struct {
@@ -3034,11 +2017,11 @@ func (me XsdGoPkgHasAttr_InitialValue_XsdtInteger_1) InitialValueDefault() xsdt.
 }
 
 type TsequenceGenerator struct {
-	XsdGoPkgHasAttr_AllocationSize_XsdtInteger_1
-
 	XsdGoPkgHasAttr_InitialValue_XsdtInteger_1
 
 	XsdGoPkgHasAttr_SequenceName_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_AllocationSize_XsdtInteger_1
 }
 
 //	If the WalkHandlers.TsequenceGenerator function is not nil (ie. was set by outside code), calls it with this TsequenceGenerator instance as the single argument. Then calls the Walk() method on 0/3 embed(s) and 0/0 field(s) belonging to this TsequenceGenerator instance.
@@ -3080,6 +2063,10 @@ func (me *XsdGoPkgHasElem_SequenceGeneratorsequenceidschema_SequenceGenerator_Ts
 		}
 	}
 	return
+}
+
+type XsdGoPkgHasAttr_Class_XsdtString_ struct {
+	Class xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping class,attr"`
 }
 
 type TcustomIdGenerator struct {
@@ -3127,18 +2114,25 @@ func (me *XsdGoPkgHasElem_CustomIdGeneratorsequenceidschema_CustomIdGenerator_Tc
 	return
 }
 
+type XsdGoPkgHasAttr_AssociationKey_XsdtBoolean_False struct {
+	AssociationKey xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping association-key,attr"`
+}
+
+//	Returns the default value for AssociationKey -- false
+func (me XsdGoPkgHasAttr_AssociationKey_XsdtBoolean_False) AssociationKeyDefault() xsdt.Boolean {
+	return xsdt.Boolean(false)
+}
+
+type XsdGoPkgHasAttr_Length_XsdtNmtoken_ struct {
+	Length xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping length,attr"`
+}
+
 type Tid struct {
-	XsdGoPkgHasAttr_AssociationKey_XsdtBoolean_False
-
-	XsdGoPkgHasAttr_ColumnDefinition_XsdtString_
-
-	XsdGoPkgHasAttr_Name_XsdtNmtoken_
-
 	XsdGoPkgHasElem_Generatorsequenceidschema_Generator_Tgenerator_
 
-	XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_
+	XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_
 
-	XsdGoPkgHasAttr_Length_XsdtNmtoken_
+	XsdGoPkgHasAttr_Type_XsdtNmtoken_
 
 	XsdGoPkgHasAttr_Column_XsdtNmtoken_
 
@@ -3146,7 +2140,13 @@ type Tid struct {
 
 	XsdGoPkgHasElem_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_
 
-	XsdGoPkgHasAttr_Type_XsdtNmtoken_
+	XsdGoPkgHasAttr_AssociationKey_XsdtBoolean_False
+
+	XsdGoPkgHasAttr_ColumnDefinition_XsdtString_
+
+	XsdGoPkgHasAttr_Name_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_Length_XsdtNmtoken_
 }
 
 //	If the WalkHandlers.Tid function is not nil (ie. was set by outside code), calls it with this Tid instance as the single argument. Then calls the Walk() method on 4/10 embed(s) and 0/0 field(s) belonging to this Tid instance.
@@ -3157,16 +2157,16 @@ func (me *Tid) Walk() (err error) {
 				return
 			}
 		}
-		if err = me.XsdGoPkgHasElem_Generatorsequenceidschema_Generator_Tgenerator_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
 		if err = me.XsdGoPkgHasElem_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if err = me.XsdGoPkgHasElem_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_Generatorsequenceidschema_Generator_Tgenerator_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if fn != nil {
@@ -3204,60 +2204,1060 @@ func (me *XsdGoPkgHasElems_Idsequenceentityschema_Id_Tid_) Walk() (err error) {
 	return
 }
 
+type XsdGoPkgHasAttr_ColumnPrefix_XsdtString_ struct {
+	ColumnPrefix xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping column-prefix,attr"`
+}
+
+type XsdGoPkgHasAttr_UseColumnPrefix_XsdtBoolean_True struct {
+	UseColumnPrefix xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping use-column-prefix,attr"`
+}
+
+//	Returns the default value for UseColumnPrefix -- true
+func (me XsdGoPkgHasAttr_UseColumnPrefix_XsdtBoolean_True) UseColumnPrefixDefault() xsdt.Boolean {
+	return xsdt.Boolean(true)
+}
+
+type Tembedded struct {
+	XsdGoPkgHasAttr_Name_XsdtString_
+
+	XsdGoPkgHasAttr_Class_XsdtString_
+
+	XsdGoPkgHasAttr_ColumnPrefix_XsdtString_
+
+	XsdGoPkgHasAttr_UseColumnPrefix_XsdtBoolean_True
+}
+
+//	If the WalkHandlers.Tembedded function is not nil (ie. was set by outside code), calls it with this Tembedded instance as the single argument. Then calls the Walk() method on 0/4 embed(s) and 0/0 field(s) belonging to this Tembedded instance.
+func (me *Tembedded) Walk() (err error) {
+	if fn := WalkHandlers.Tembedded; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_ struct {
+	Embeddeds []*Tembedded `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping embedded"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_ instance.
+func (me *XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.Embeddeds {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasAttr_RepositoryClass_XsdtString_ struct {
+	RepositoryClass xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping repository-class,attr"`
+}
+
+type XsdGoPkgHasAttr_Precision_XsdtInteger_ struct {
+	Precision xsdt.Integer `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping precision,attr"`
+}
+
+type XsdGoPkgHasAttr_Type_XsdtNmtoken_String struct {
+	Type xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping type,attr"`
+}
+
+//	Returns the default value for Type -- "string"
+func (me XsdGoPkgHasAttr_Type_XsdtNmtoken_String) TypeDefault() xsdt.Nmtoken {
+	return xsdt.Nmtoken("string")
+}
+
+type XsdGoPkgHasAttr_Scale_XsdtInteger_ struct {
+	Scale xsdt.Integer `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping scale,attr"`
+}
+
+type XsdGoPkgHasAttr_Version_XsdtBoolean_ struct {
+	Version xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping version,attr"`
+}
+
+type XsdGoPkgHasAttr_Nullable_XsdtBoolean_False struct {
+	Nullable xsdt.Boolean `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping nullable,attr"`
+}
+
+//	Returns the default value for Nullable -- false
+func (me XsdGoPkgHasAttr_Nullable_XsdtBoolean_False) NullableDefault() xsdt.Boolean {
+	return xsdt.Boolean(false)
+}
+
+type Tfield struct {
+	XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_
+
+	XsdGoPkgHasAttr_Precision_XsdtInteger_
+
+	XsdGoPkgHasAttr_Type_XsdtNmtoken_String
+
+	XsdGoPkgHasAttr_Length_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_Unique_XsdtBoolean_False
+
+	XsdGoPkgHasAttr_ColumnDefinition_XsdtString_
+
+	XsdGoPkgHasAttr_Scale_XsdtInteger_
+
+	XsdGoPkgHasAttr_Name_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_Column_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_Version_XsdtBoolean_
+
+	XsdGoPkgHasAttr_Nullable_XsdtBoolean_False
+}
+
+//	If the WalkHandlers.Tfield function is not nil (ie. was set by outside code), calls it with this Tfield instance as the single argument. Then calls the Walk() method on 1/11 embed(s) and 0/0 field(s) belonging to this Tfield instance.
+func (me *Tfield) Walk() (err error) {
+	if fn := WalkHandlers.Tfield; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_ struct {
+	Fields []*Tfield `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_ instance.
+func (me *XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.Fields {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type ToneToMany struct {
+	XsdGoPkgHasAttr_OrphanRemoval_XsdtBoolean_False
+
+	XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_
+
+	XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_
+
+	XsdGoPkgHasAttr_TargetEntity_XsdtString_
+
+	XsdGoPkgHasAttr_MappedBy_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_Field_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_IndexBy_XsdtNmtoken_
+
+	XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_
+
+	XsdGoPkgHasAttr_Fetch_TfetchType_Lazy
+}
+
+//	If the WalkHandlers.ToneToMany function is not nil (ie. was set by outside code), calls it with this ToneToMany instance as the single argument. Then calls the Walk() method on 3/9 embed(s) and 0/0 field(s) belonging to this ToneToMany instance.
+func (me *ToneToMany) Walk() (err error) {
+	if fn := WalkHandlers.ToneToMany; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_ struct {
+	OneToManies []*ToneToMany `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping one-to-many"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_ instance.
+func (me *XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.OneToManies {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type TinheritanceType xsdt.Token
+
+//	Since TinheritanceType is just a simple String type, this merely sets the current value from the specified string.
+func (me *TinheritanceType) Set(s string) { (*xsdt.Token)(me).Set(s) }
+
+//	Since TinheritanceType is just a simple String type, this merely returns the current string value.
+func (me TinheritanceType) String() string { return xsdt.Token(me).String() }
+
+//	This convenience method just performs a simple type conversion to TinheritanceType's alias type xsdt.Token.
+func (me TinheritanceType) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
+
+//	Returns true if the value of this enumerated TinheritanceType is "SINGLE_TABLE".
+func (me TinheritanceType) IsSingleTable() bool { return me.String() == "SINGLE_TABLE" }
+
+//	Returns true if the value of this enumerated TinheritanceType is "JOINED".
+func (me TinheritanceType) IsJoined() bool { return me.String() == "JOINED" }
+
+//	Returns true if the value of this enumerated TinheritanceType is "TABLE_PER_CLASS".
+func (me TinheritanceType) IsTablePerClass() bool { return me.String() == "TABLE_PER_CLASS" }
+
+type XsdGoPkgHasAttr_InheritanceType_TinheritanceType_ struct {
+	InheritanceType TinheritanceType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping inheritance-type,attr"`
+}
+
+type XsdGoPkgHasAttr_Value_XsdtNmtoken_ struct {
+	Value xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping value,attr"`
+}
+
+type TdiscriminatorMapping struct {
+	XsdGoPkgHasAttr_Value_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_Class_XsdtString_
+}
+
+//	If the WalkHandlers.TdiscriminatorMapping function is not nil (ie. was set by outside code), calls it with this TdiscriminatorMapping instance as the single argument. Then calls the Walk() method on 0/2 embed(s) and 0/0 field(s) belonging to this TdiscriminatorMapping instance.
+func (me *TdiscriminatorMapping) Walk() (err error) {
+	if fn := WalkHandlers.TdiscriminatorMapping; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ struct {
+	DiscriminatorMappings []*TdiscriminatorMapping `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-mapping"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ instance.
+func (me *XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.DiscriminatorMappings {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type TdiscriminatorMap struct {
+	XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_
+}
+
+//	If the WalkHandlers.TdiscriminatorMap function is not nil (ie. was set by outside code), calls it with this TdiscriminatorMap instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this TdiscriminatorMap instance.
+func (me *TdiscriminatorMap) Walk() (err error) {
+	if fn := WalkHandlers.TdiscriminatorMap; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ struct {
+	DiscriminatorMap *TdiscriminatorMap `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-map"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ instance.
+func (me *XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.DiscriminatorMap.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type TentityListener struct {
+	XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_
+
+	XsdGoPkgHasAttr_Class_XsdtString_
+}
+
+//	If the WalkHandlers.TentityListener function is not nil (ie. was set by outside code), calls it with this TentityListener instance as the single argument. Then calls the Walk() method on 1/2 embed(s) and 0/0 field(s) belonging to this TentityListener instance.
+func (me *TentityListener) Walk() (err error) {
+	if fn := WalkHandlers.TentityListener; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ struct {
+	EntityListeners []*TentityListener `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-listener"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ instance.
+func (me *XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.EntityListeners {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type TentityListeners struct {
+	XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_
+}
+
+//	If the WalkHandlers.TentityListeners function is not nil (ie. was set by outside code), calls it with this TentityListeners instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this TentityListeners instance.
+func (me *TentityListeners) Walk() (err error) {
+	if fn := WalkHandlers.TentityListeners; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ struct {
+	EntityListeners *TentityListeners `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-listeners"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_ instance.
+func (me *XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.EntityListeners.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_ struct {
+	JoinColumn *TjoinColumn `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-column"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_ instance.
+func (me *XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.JoinColumn.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type ToneToOne struct {
+	XsdGoPkgHasAttr_Fetch_TfetchType_Lazy
+
+	XsdGoPkgHasAttr_Field_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_TargetEntity_XsdtString_
+
+	XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_
+
+	XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_
+
+	XsdGoPkgHasAttr_OrphanRemoval_XsdtBoolean_False
+
+	XsdGoPkgHasAttr_InversedBy_XsdtNmtoken_
+
+	XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_
+
+	XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_
+
+	XsdGoPkgHasAttr_MappedBy_XsdtNmtoken_
+}
+
+//	If the WalkHandlers.ToneToOne function is not nil (ie. was set by outside code), calls it with this ToneToOne instance as the single argument. Then calls the Walk() method on 4/10 embed(s) and 0/0 field(s) belonging to this ToneToOne instance.
+func (me *ToneToOne) Walk() (err error) {
+	if fn := WalkHandlers.ToneToOne; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_ struct {
+	OneToOnes []*ToneToOne `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping one-to-one"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_ instance.
+func (me *XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.OneToOnes {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type TmanyToOne struct {
+	XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_
+
+	XsdGoPkgHasAttr_TargetEntity_XsdtString_
+
+	XsdGoPkgHasAttr_Fetch_TfetchType_Lazy
+
+	XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_
+
+	XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_
+
+	XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_
+
+	XsdGoPkgHasAttr_Field_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_OrphanRemoval_XsdtBoolean_False
+
+	XsdGoPkgHasAttr_InversedBy_XsdtNmtoken_
+}
+
+//	If the WalkHandlers.TmanyToOne function is not nil (ie. was set by outside code), calls it with this TmanyToOne instance as the single argument. Then calls the Walk() method on 4/9 embed(s) and 0/0 field(s) belonging to this TmanyToOne instance.
+func (me *TmanyToOne) Walk() (err error) {
+	if fn := WalkHandlers.TmanyToOne; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ struct {
+	ManyToOnes []*TmanyToOne `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping many-to-one"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ instance.
+func (me *XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.ManyToOnes {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type TchangeTrackingPolicy xsdt.Token
+
+//	Returns true if the value of this enumerated TchangeTrackingPolicy is "NOTIFY".
+func (me TchangeTrackingPolicy) IsNotify() bool { return me.String() == "NOTIFY" }
+
+//	Since TchangeTrackingPolicy is just a simple String type, this merely sets the current value from the specified string.
+func (me *TchangeTrackingPolicy) Set(s string) { (*xsdt.Token)(me).Set(s) }
+
+//	Since TchangeTrackingPolicy is just a simple String type, this merely returns the current string value.
+func (me TchangeTrackingPolicy) String() string { return xsdt.Token(me).String() }
+
+//	This convenience method just performs a simple type conversion to TchangeTrackingPolicy's alias type xsdt.Token.
+func (me TchangeTrackingPolicy) ToXsdtToken() xsdt.Token { return xsdt.Token(me) }
+
+//	Returns true if the value of this enumerated TchangeTrackingPolicy is "DEFERRED_IMPLICIT".
+func (me TchangeTrackingPolicy) IsDeferredImplicit() bool { return me.String() == "DEFERRED_IMPLICIT" }
+
+//	Returns true if the value of this enumerated TchangeTrackingPolicy is "DEFERRED_EXPLICIT".
+func (me TchangeTrackingPolicy) IsDeferredExplicit() bool { return me.String() == "DEFERRED_EXPLICIT" }
+
+type XsdGoPkgHasAttr_ChangeTrackingPolicy_TchangeTrackingPolicy_ struct {
+	ChangeTrackingPolicy TchangeTrackingPolicy `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping change-tracking-policy,attr"`
+}
+
+type XsdGoPkgHasAttr_Flags_XsdtString_ struct {
+	Flags xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping flags,attr"`
+}
+
+type Tindex struct {
+	XsdGoPkgHasAttr_Columns_XsdtString_
+
+	XsdGoPkgHasAttr_Flags_XsdtString_
+
+	XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_
+
+	XsdGoPkgHasAttr_Name_XsdtNmtoken_
+}
+
+//	If the WalkHandlers.Tindex function is not nil (ie. was set by outside code), calls it with this Tindex instance as the single argument. Then calls the Walk() method on 1/4 embed(s) and 0/0 field(s) belonging to this Tindex instance.
+func (me *Tindex) Walk() (err error) {
+	if fn := WalkHandlers.Tindex; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_ struct {
+	Indexs []*Tindex `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping index"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_ instance.
+func (me *XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.Indexs {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type Tindexes struct {
+	XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_
+}
+
+//	If the WalkHandlers.Tindexes function is not nil (ie. was set by outside code), calls it with this Tindexes instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this Tindexes instance.
+func (me *Tindexes) Walk() (err error) {
+	if fn := WalkHandlers.Tindexes; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_ struct {
+	Indexes *Tindexes `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping indexes"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_ instance.
+func (me *XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.Indexes.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type TattributeOverrideField struct {
+	XsdGoPkgHasAttr_Unique_XsdtBoolean_False
+
+	XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_
+
+	XsdGoPkgHasAttr_ColumnDefinition_XsdtString_
+
+	XsdGoPkgHasAttr_Scale_XsdtInteger_
+
+	XsdGoPkgHasAttr_Type_XsdtNmtoken_String
+
+	XsdGoPkgHasAttr_Precision_XsdtInteger_
+
+	XsdGoPkgHasAttr_Length_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_Version_XsdtBoolean_
+
+	XsdGoPkgHasAttr_Column_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_Nullable_XsdtBoolean_False
+}
+
+//	If the WalkHandlers.TattributeOverrideField function is not nil (ie. was set by outside code), calls it with this TattributeOverrideField instance as the single argument. Then calls the Walk() method on 1/10 embed(s) and 0/0 field(s) belonging to this TattributeOverrideField instance.
+func (me *TattributeOverrideField) Walk() (err error) {
+	if fn := WalkHandlers.TattributeOverrideField; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ struct {
+	Field *TattributeOverrideField `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ instance.
+func (me *XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.Field.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type TattributeOverride struct {
+	XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_
+
+	XsdGoPkgHasAttr_Name_XsdtNmtoken_
+}
+
+//	If the WalkHandlers.TattributeOverride function is not nil (ie. was set by outside code), calls it with this TattributeOverride instance as the single argument. Then calls the Walk() method on 1/2 embed(s) and 0/0 field(s) belonging to this TattributeOverride instance.
+func (me *TattributeOverride) Walk() (err error) {
+	if fn := WalkHandlers.TattributeOverride; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ struct {
+	AttributeOverrides []*TattributeOverride `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping attribute-override"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ instance.
+func (me *XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.AttributeOverrides {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type TattributeOverrides struct {
+	XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_
+}
+
+//	If the WalkHandlers.TattributeOverrides function is not nil (ie. was set by outside code), calls it with this TattributeOverrides instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this TattributeOverrides instance.
+func (me *TattributeOverrides) Walk() (err error) {
+	if fn := WalkHandlers.TattributeOverrides; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ struct {
+	AttributeOverrideses []*TattributeOverrides `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping attribute-overrides"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ instance.
+func (me *XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.AttributeOverrideses {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasAttr_FieldName_XsdtNmtoken_ struct {
+	FieldName xsdt.Nmtoken `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field-name,attr"`
+}
+
+type TdiscriminatorColumn struct {
+	XsdGoPkgHasAttr_Length_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_ColumnDefinition_XsdtString_
+
+	XsdGoPkgHasAttr_Name_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_Type_XsdtNmtoken_
+
+	XsdGoPkgHasAttr_FieldName_XsdtNmtoken_
+}
+
+//	If the WalkHandlers.TdiscriminatorColumn function is not nil (ie. was set by outside code), calls it with this TdiscriminatorColumn instance as the single argument. Then calls the Walk() method on 0/5 embed(s) and 0/0 field(s) belonging to this TdiscriminatorColumn instance.
+func (me *TdiscriminatorColumn) Walk() (err error) {
+	if fn := WalkHandlers.TdiscriminatorColumn; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ struct {
+	DiscriminatorColumn *TdiscriminatorColumn `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-column"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ instance.
+func (me *XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.DiscriminatorColumn.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
 type Tentity struct {
-	XsdGoPkgHasAttr_ReadOnly_XsdtBoolean_False
+	XsdGoPkgHasElem_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_
+
+	XsdGoPkgHasAttr_Schema_XsdtNmtoken_
+
+	XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_
 
 	XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_
 
+	XsdGoPkgHasElems_Idsequenceentityschema_Id_Tid_
+
+	XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_
+
+	XsdGoPkgHasAttr_RepositoryClass_XsdtString_
+
+	XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_
+
+	XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_
+
+	XsdGoPkgHasAttr_InheritanceType_TinheritanceType_
+
+	XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_
+
 	XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_
+
+	XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_
+
+	XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_
+
+	XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_
+
+	XsdGoPkgHasAttr_ChangeTrackingPolicy_TchangeTrackingPolicy_
+
+	XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_
+
+	XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_
+
+	XsdGoPkgHasAttr_Name_XsdtString_
+
+	XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_
+
+	XsdGoPkgHasElems_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_
 
 	XsdGoPkgHasElems_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_
 
 	XsdGoPkgHasAttr_Table_XsdtNmtoken_
 
-	XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_
+	XsdGoPkgHasElem_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_
 
 	XsdGoPkgHasElem_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_
 
 	XsdGoPkgHasElems_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_
 
-	XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_
-
-	XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_
-
-	XsdGoPkgHasElem_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_
-
-	XsdGoPkgHasAttr_RepositoryClass_XsdtString_
-
-	XsdGoPkgHasAttr_Name_XsdtString_
-
-	XsdGoPkgHasElem_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_
-
-	XsdGoPkgHasElems_Idsequenceentityschema_Id_Tid_
-
-	XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_
-
-	XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_
-
-	XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_
-
-	XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_
-
-	XsdGoPkgHasAttr_InheritanceType_TinheritanceType_
-
-	XsdGoPkgHasAttr_Schema_XsdtNmtoken_
-
-	XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_
-
-	XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_
-
-	XsdGoPkgHasElems_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_
-
-	XsdGoPkgHasAttr_ChangeTrackingPolicy_TchangeTrackingPolicy_
-
-	XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_
-
-	XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_
+	XsdGoPkgHasAttr_ReadOnly_XsdtBoolean_False
 }
 
 //	If the WalkHandlers.Tentity function is not nil (ie. was set by outside code), calls it with this Tentity instance as the single argument. Then calls the Walk() method on 20/27 embed(s) and 0/0 field(s) belonging to this Tentity instance.
@@ -3268,13 +3268,7 @@ func (me *Tentity) Walk() (err error) {
 				return
 			}
 		}
-		if err = me.XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElems_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.XsdGoPkgHasElem_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if err = me.XsdGoPkgHasElem_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
@@ -3283,49 +3277,55 @@ func (me *Tentity) Walk() (err error) {
 		if err = me.XsdGoPkgHasElems_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
-		if err = me.XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
 		if err = me.XsdGoPkgHasElem_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if err = me.XsdGoPkgHasElems_Idsequenceentityschema_Id_Tid_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if err = me.XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
-		if err = me.XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
-		if err = me.XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
-		if err = me.XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.XsdGoPkgHasElems_Idsequenceentityschema_Id_Tid_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if err = me.XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
-		if err = me.XsdGoPkgHasElems_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if err = me.XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
-		if err = me.XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
-		if err = me.XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElems_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElems_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if err = me.XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if fn != nil {
@@ -3464,11 +3464,11 @@ func (me *XsdGoPkgHasElems_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMa
 }
 
 type TxsdDoctrineMapping struct {
+	XsdGoPkgHasElems_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_
+
 	XsdGoPkgHasElems_EntitysequenceTxsdDoctrineMappingdoctrineMappingschema_Entity_Tentity_
 
 	XsdGoPkgHasElems_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_
-
-	XsdGoPkgHasElems_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_
 }
 
 //	If the WalkHandlers.TxsdDoctrineMapping function is not nil (ie. was set by outside code), calls it with this TxsdDoctrineMapping instance as the single argument. Then calls the Walk() method on 3/3 embed(s) and 0/0 field(s) belonging to this TxsdDoctrineMapping instance.
@@ -3486,30 +3486,6 @@ func (me *TxsdDoctrineMapping) Walk() (err error) {
 			return
 		}
 		if err = me.XsdGoPkgHasElems_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_DoctrineMapping struct {
-	DoctrineMapping *TxsdDoctrineMapping `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping doctrine-mapping"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_DoctrineMapping function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_DoctrineMapping instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_DoctrineMapping instance.
-func (me *XsdGoPkgHasElem_DoctrineMapping) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_DoctrineMapping; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.DoctrineMapping.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if fn != nil {
@@ -3547,489 +3523,19 @@ func (me *XsdGoPkgHasElems_DoctrineMapping) Walk() (err error) {
 	return
 }
 
-type XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_ struct {
-	OneToOne *ToneToOne `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping one-to-one"`
+type XsdGoPkgHasElem_DoctrineMapping struct {
+	DoctrineMapping *TxsdDoctrineMapping `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping doctrine-mapping"`
 }
 
-//	If the WalkHandlers.XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_ instance.
-func (me *XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElem_DoctrineMapping function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_DoctrineMapping instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_DoctrineMapping instance.
+func (me *XsdGoPkgHasElem_DoctrineMapping) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_DoctrineMapping; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
 		}
-		if err = me.OneToOne.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ struct {
-	AttributeOverrides *TattributeOverrides `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping attribute-overrides"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ instance.
-func (me *XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.AttributeOverrides.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_JoinColumnssequenceassociationOverrideschema_JoinColumns_TjoinColumns_ struct {
-	JoinColumnses []*TjoinColumns `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-columns"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_JoinColumnssequenceassociationOverrideschema_JoinColumns_TjoinColumns_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_JoinColumnssequenceassociationOverrideschema_JoinColumns_TjoinColumns_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_JoinColumnssequenceassociationOverrideschema_JoinColumns_TjoinColumns_ instance.
-func (me *XsdGoPkgHasElems_JoinColumnssequenceassociationOverrideschema_JoinColumns_TjoinColumns_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_JoinColumnssequenceassociationOverrideschema_JoinColumns_TjoinColumns_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.JoinColumnses {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ struct {
-	ManyToOne *TmanyToOne `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping many-to-one"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ instance.
-func (me *XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.ManyToOne.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ struct {
-	UniqueConstraint *TuniqueConstraint `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping unique-constraint"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ instance.
-func (me *XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.UniqueConstraint.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_ struct {
-	JoinTables []*TjoinTable `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-table"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_ instance.
-func (me *XsdGoPkgHasElems_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.JoinTables {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ struct {
-	NamedQuery *TnamedQuery `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-query"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ instance.
-func (me *XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.NamedQuery.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ struct {
-	SequenceGenerators []*TsequenceGenerator `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping sequence-generator"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ instance.
-func (me *XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.SequenceGenerators {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ struct {
-	ColumnResult *TcolumnResult `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping column-result"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ instance.
-func (me *XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.ColumnResult.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ struct {
-	SqlResultSetMappings *TsqlResultSetMappings `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping sql-result-set-mappings"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ instance.
-func (me *XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.SqlResultSetMappings.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ struct {
-	NamedQuerieses []*TnamedQueries `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-queries"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ instance.
-func (me *XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.NamedQuerieses {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_ struct {
-	OneToMany *ToneToMany `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping one-to-many"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_ instance.
-func (me *XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.OneToMany.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ struct {
-	ManyToMany *TmanyToMany `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping many-to-many"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ instance.
-func (me *XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.ManyToMany.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_CachesequenceoneToManyschema_Cache_Tcache_ struct {
-	Caches []*Tcache `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cache"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_CachesequenceoneToManyschema_Cache_Tcache_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CachesequenceoneToManyschema_Cache_Tcache_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CachesequenceoneToManyschema_Cache_Tcache_ instance.
-func (me *XsdGoPkgHasElems_CachesequenceoneToManyschema_Cache_Tcache_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_CachesequenceoneToManyschema_Cache_Tcache_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.Caches {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_ struct {
-	Index *Tindex `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping index"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_ instance.
-func (me *XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.Index.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_ struct {
-	Field *Tfield `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_ instance.
-func (me *XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.Field.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_OptionssequenceattributeOverrideFieldschema_Options_Toptions_ struct {
-	Optionses []*Toptions `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping options"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_OptionssequenceattributeOverrideFieldschema_Options_Toptions_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_OptionssequenceattributeOverrideFieldschema_Options_Toptions_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_OptionssequenceattributeOverrideFieldschema_Options_Toptions_ instance.
-func (me *XsdGoPkgHasElems_OptionssequenceattributeOverrideFieldschema_Options_Toptions_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_OptionssequenceattributeOverrideFieldschema_Options_Toptions_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.Optionses {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ struct {
-	AssociationOverrides *TassociationOverrides `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping association-overrides"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ instance.
-func (me *XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.AssociationOverrides.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ struct {
-	CustomIdGenerators []*TcustomIdGenerator `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping custom-id-generator"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ instance.
-func (me *XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.CustomIdGenerators {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ struct {
-	SqlResultSetMapping *TsqlResultSetMapping `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping sql-result-set-mapping"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ instance.
-func (me *XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.SqlResultSetMapping.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.DoctrineMapping.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if fn != nil {
@@ -4065,67 +3571,19 @@ func (me *XsdGoPkgHasElem_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingsc
 	return
 }
 
-type XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ struct {
-	FieldResult *TfieldResult `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field-result"`
+type XsdGoPkgHasElems_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ struct {
+	JoinColumnses []*TjoinColumns `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-columns"`
 }
 
-//	If the WalkHandlers.XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ instance.
-func (me *XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElems_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_ instance.
+func (me *XsdGoPkgHasElems_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
 		}
-		if err = me.FieldResult.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ struct {
-	NamedNativeQuery *TnamedNativeQuery `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-native-query"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ instance.
-func (me *XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.NamedNativeQuery.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ struct {
-	InverseJoinColumnses []*TjoinColumns `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping inverse-join-columns"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ instance.
-func (me *XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.InverseJoinColumnses {
+		for _, x := range me.JoinColumnses {
 			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
@@ -4139,67 +3597,19 @@ func (me *XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoin
 	return
 }
 
-type XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_ struct {
-	Entity *Tentity `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity"`
+type XsdGoPkgHasElems_Optionssequenceidschema_Options_Toptions_ struct {
+	Optionses []*Toptions `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping options"`
 }
 
-//	If the WalkHandlers.XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_ instance.
-func (me *XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElems_Optionssequenceidschema_Options_Toptions_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Optionssequenceidschema_Options_Toptions_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Optionssequenceidschema_Options_Toptions_ instance.
+func (me *XsdGoPkgHasElems_Optionssequenceidschema_Options_Toptions_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_Optionssequenceidschema_Options_Toptions_; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
 		}
-		if err = me.Entity.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ struct {
-	MappedSuperclass *TmappedSuperclass `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping mapped-superclass"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ instance.
-func (me *XsdGoPkgHasElem_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.MappedSuperclass.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ struct {
-	DiscriminatorColumns []*TdiscriminatorColumn `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-column"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ instance.
-func (me *XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.DiscriminatorColumns {
+		for _, x := range me.Optionses {
 			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
@@ -4213,269 +3623,19 @@ func (me *XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_Discriminator
 	return
 }
 
-type XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ struct {
-	AttributeOverride *TattributeOverride `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping attribute-override"`
+type XsdGoPkgHasElems_CachesequencemanyToOneschema_Cache_Tcache_ struct {
+	Caches []*Tcache `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cache"`
 }
 
-//	If the WalkHandlers.XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ instance.
-func (me *XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElems_CachesequencemanyToOneschema_Cache_Tcache_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CachesequencemanyToOneschema_Cache_Tcache_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CachesequencemanyToOneschema_Cache_Tcache_ instance.
+func (me *XsdGoPkgHasElems_CachesequencemanyToOneschema_Cache_Tcache_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_CachesequencemanyToOneschema_Cache_Tcache_; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
 		}
-		if err = me.AttributeOverride.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ struct {
-	Fields []*TattributeOverrideField `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ instance.
-func (me *XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.Fields {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ struct {
-	LifecycleCallback *TlifecycleCallback `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping lifecycle-callback"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ instance.
-func (me *XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.LifecycleCallback.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ struct {
-	OrderByField *TorderByField `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping order-by-field"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ instance.
-func (me *XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.OrderByField.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_ struct {
-	Id *Tid `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping id"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_ instance.
-func (me *XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.Id.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_CascadesequenceoneToManyschema_Cascade_TcascadeType_ struct {
-	Cascades []*TcascadeType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_CascadesequenceoneToManyschema_Cascade_TcascadeType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadesequenceoneToManyschema_Cascade_TcascadeType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadesequenceoneToManyschema_Cascade_TcascadeType_ instance.
-func (me *XsdGoPkgHasElems_CascadesequenceoneToManyschema_Cascade_TcascadeType_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_CascadesequenceoneToManyschema_Cascade_TcascadeType_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.Cascades {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ struct {
-	DiscriminatorMaps []*TdiscriminatorMap `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-map"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ instance.
-func (me *XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.DiscriminatorMaps {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ struct {
-	CascadePersists []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-persist"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ instance.
-func (me *XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.CascadePersists {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_ struct {
-	Generators []*Tgenerator `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping generator"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_ instance.
-func (me *XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.Generators {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ struct {
-	DiscriminatorMapping *TdiscriminatorMapping `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-mapping"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ instance.
-func (me *XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.DiscriminatorMapping.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ struct {
-	NamedNativeQuerieses []*TnamedNativeQueries `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-native-queries"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ instance.
-func (me *XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.NamedNativeQuerieses {
+		for _, x := range me.Caches {
 			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
@@ -4513,71 +3673,19 @@ func (me *XsdGoPkgHasElem_AssociationOverridesequenceassociationOverridesschema_
 	return
 }
 
-type XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ struct {
-	CascadeRemoves []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-remove"`
+type XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ struct {
+	DiscriminatorMapping *TdiscriminatorMapping `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-mapping"`
 }
 
-//	If the WalkHandlers.XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ instance.
-func (me *XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_ instance.
+func (me *XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
 		}
-		for _, x := range me.CascadeRemoves {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ struct {
-	LifecycleCallbackses []*TlifecycleCallbacks `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping lifecycle-callbacks"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ instance.
-func (me *XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.LifecycleCallbackses {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_Optionsequenceoptionschema_Option_Toption_ struct {
-	Option *Toption `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping option"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_Optionsequenceoptionschema_Option_Toption_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Optionsequenceoptionschema_Option_Toption_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Optionsequenceoptionschema_Option_Toption_ instance.
-func (me *XsdGoPkgHasElem_Optionsequenceoptionschema_Option_Toption_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_Optionsequenceoptionschema_Option_Toption_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.Option.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.DiscriminatorMapping.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if fn != nil {
@@ -4589,67 +3697,46 @@ func (me *XsdGoPkgHasElem_Optionsequenceoptionschema_Option_Toption_) Walk() (er
 	return
 }
 
-type XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_ struct {
-	Queries []xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping query"`
+type XsdGoPkgHasElems_CascadesequenceoneToOneschema_Cascade_TcascadeType_ struct {
+	Cascades []*TcascadeType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade"`
 }
 
-//	If the WalkHandlers.XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_ instance.
-func (me *XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElems_CascadesequenceoneToOneschema_Cascade_TcascadeType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadesequenceoneToOneschema_Cascade_TcascadeType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadesequenceoneToOneschema_Cascade_TcascadeType_ instance.
+func (me *XsdGoPkgHasElems_CascadesequenceoneToOneschema_Cascade_TcascadeType_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_CascadesequenceoneToOneschema_Cascade_TcascadeType_; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
 		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ struct {
-	EntityResult *TentityResult `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-result"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ instance.
-func (me *XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if err = me.EntityResult.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ struct {
-	CascadeDetachs []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-detach"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ instance.
-func (me *XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.CascadeDetachs {
+		for _, x := range me.Cascades {
 			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ struct {
+	FieldResult *TfieldResult `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field-result"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_ instance.
+func (me *XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.FieldResult.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
 		}
 		if fn != nil {
 			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
@@ -4686,19 +3773,19 @@ func (me *XsdGoPkgHasElems_EntityListenerssequenceentityschema_EntityListeners_T
 	return
 }
 
-type XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ struct {
-	EntityListener *TentityListener `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-listener"`
+type XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_ struct {
+	Field *Tfield `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field"`
 }
 
-//	If the WalkHandlers.XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ instance.
-func (me *XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_ instance.
+func (me *XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
 		}
-		if err = me.EntityListener.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.Field.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if fn != nil {
@@ -4710,19 +3797,19 @@ func (me *XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityList
 	return
 }
 
-type XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_ struct {
-	Embedded *Tembedded `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping embedded"`
+type XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_ struct {
+	Entity *Tentity `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity"`
 }
 
-//	If the WalkHandlers.XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_ instance.
-func (me *XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_ instance.
+func (me *XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
 		}
-		if err = me.Embedded.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+		if err = me.Entity.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 			return
 		}
 		if fn != nil {
@@ -4734,19 +3821,67 @@ func (me *XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_) Walk
 	return
 }
 
-type XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ struct {
-	CascadeRefreshs []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-refresh"`
+type XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_ struct {
+	OneToOne *ToneToOne `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping one-to-one"`
 }
 
-//	If the WalkHandlers.XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ instance.
-func (me *XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_ instance.
+func (me *XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
 		}
-		for _, x := range me.CascadeRefreshs {
+		if err = me.OneToOne.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_ struct {
+	OneToMany *ToneToMany `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping one-to-many"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_ instance.
+func (me *XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.OneToMany.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_JoinTablesequenceassociationOverrideschema_JoinTable_TjoinTable_ struct {
+	JoinTables []*TjoinTable `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping join-table"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_JoinTablesequenceassociationOverrideschema_JoinTable_TjoinTable_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_JoinTablesequenceassociationOverrideschema_JoinTable_TjoinTable_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_JoinTablesequenceassociationOverrideschema_JoinTable_TjoinTable_ instance.
+func (me *XsdGoPkgHasElems_JoinTablesequenceassociationOverrideschema_JoinTable_TjoinTable_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_JoinTablesequenceassociationOverrideschema_JoinTable_TjoinTable_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.JoinTables {
 			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
@@ -4760,20 +3895,22 @@ func (me *XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefres
 	return
 }
 
-type TinverseJoinColumns struct {
-	XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_
+type XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ struct {
+	DiscriminatorColumns []*TdiscriminatorColumn `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-column"`
 }
 
-//	If the WalkHandlers.TinverseJoinColumns function is not nil (ie. was set by outside code), calls it with this TinverseJoinColumns instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this TinverseJoinColumns instance.
-func (me *TinverseJoinColumns) Walk() (err error) {
-	if fn := WalkHandlers.TinverseJoinColumns; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_ instance.
+func (me *XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
 		}
-		if err = me.XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-			return
+		for _, x := range me.DiscriminatorColumns {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
 		}
 		if fn != nil {
 			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
@@ -4784,22 +3921,46 @@ func (me *TinverseJoinColumns) Walk() (err error) {
 	return
 }
 
-type XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ struct {
-	CascadeMerges []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-merge"`
+type XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ struct {
+	NamedNativeQuerieses []*TnamedNativeQueries `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-native-queries"`
 }
 
-//	If the WalkHandlers.XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ instance.
-func (me *XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_; me != nil {
+//	If the WalkHandlers.XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_ instance.
+func (me *XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_; me != nil {
 		if fn != nil {
 			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
 		}
-		for _, x := range me.CascadeMerges {
+		for _, x := range me.NamedNativeQuerieses {
 			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ struct {
+	AttributeOverride *TattributeOverride `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping attribute-override"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_ instance.
+func (me *XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.AttributeOverride.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
 		}
 		if fn != nil {
 			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
@@ -4823,32 +3984,6 @@ func (me *XsdGoPkgHasElems_CascadeAllsequencecascadeTypeschema_CascadeAll_Tempty
 			}
 		}
 		for _, x := range me.CascadeAlls {
-			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		if fn != nil {
-			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-	}
-	return
-}
-
-type XsdGoPkgHasElems_OrderBysequenceoneToManyschema_OrderBy_TorderBy_ struct {
-	OrderBies []*TorderBy `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping order-by"`
-}
-
-//	If the WalkHandlers.XsdGoPkgHasElems_OrderBysequenceoneToManyschema_OrderBy_TorderBy_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_OrderBysequenceoneToManyschema_OrderBy_TorderBy_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_OrderBysequenceoneToManyschema_OrderBy_TorderBy_ instance.
-func (me *XsdGoPkgHasElems_OrderBysequenceoneToManyschema_OrderBy_TorderBy_) Walk() (err error) {
-	if fn := WalkHandlers.XsdGoPkgHasElems_OrderBysequenceoneToManyschema_OrderBy_TorderBy_; me != nil {
-		if fn != nil {
-			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
-				return
-			}
-		}
-		for _, x := range me.OrderBies {
 			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
@@ -4888,6 +4023,56 @@ func (me *XsdGoPkgHasElems_InversedBysequenceassociationOverrideschema_InversedB
 	return
 }
 
+type XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ struct {
+	CascadeRefreshs []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-refresh"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_ instance.
+func (me *XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.CascadeRefreshs {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ struct {
+	ManyToMany *TmanyToMany `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping many-to-many"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_ instance.
+func (me *XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.ManyToMany.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
 type XsdGoPkgHasElems_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_ struct {
 	UniqueConstraintses []*TuniqueConstraints `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping unique-constraints"`
 }
@@ -4901,6 +4086,106 @@ func (me *XsdGoPkgHasElems_UniqueConstraintssequenceentityschema_UniqueConstrain
 			}
 		}
 		for _, x := range me.UniqueConstraintses {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ struct {
+	EntityResult *TentityResult `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-result"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_ instance.
+func (me *XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.EntityResult.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ struct {
+	OrderByField *TorderByField `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping order-by-field"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_ instance.
+func (me *XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.OrderByField.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ struct {
+	SequenceGenerators []*TsequenceGenerator `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping sequence-generator"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_ instance.
+func (me *XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.SequenceGenerators {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ struct {
+	CustomIdGenerators []*TcustomIdGenerator `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping custom-id-generator"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_ instance.
+func (me *XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.CustomIdGenerators {
 			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
 				return
 			}
@@ -4940,6 +4225,721 @@ func (me *XsdGoPkgHasElems_Indexessequenceentityschema_Indexes_Tindexes_) Walk()
 	return
 }
 
+type XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ struct {
+	CascadePersists []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-persist"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_ instance.
+func (me *XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.CascadePersists {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ struct {
+	OrderBies []*TorderBy `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping order-by"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_OrderBysequencemanyToManyschema_OrderBy_TorderBy_ instance.
+func (me *XsdGoPkgHasElems_OrderBysequencemanyToManyschema_OrderBy_TorderBy_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_OrderBysequencemanyToManyschema_OrderBy_TorderBy_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.OrderBies {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ struct {
+	NamedQuery *TnamedQuery `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-query"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_ instance.
+func (me *XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.NamedQuery.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_ struct {
+	Queries []xsdt.String `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping query"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_ instance.
+func (me *XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ struct {
+	LifecycleCallback *TlifecycleCallback `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping lifecycle-callback"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_ instance.
+func (me *XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.LifecycleCallback.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ struct {
+	NamedQuerieses []*TnamedQueries `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-queries"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_ instance.
+func (me *XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.NamedQuerieses {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ struct {
+	AttributeOverrides *TattributeOverrides `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping attribute-overrides"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_ instance.
+func (me *XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.AttributeOverrides.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ struct {
+	UniqueConstraint *TuniqueConstraint `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping unique-constraint"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_ instance.
+func (me *XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.UniqueConstraint.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_ struct {
+	Index *Tindex `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping index"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_ instance.
+func (me *XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.Index.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ struct {
+	CascadeRemoves []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-remove"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_ instance.
+func (me *XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.CascadeRemoves {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ struct {
+	SqlResultSetMappings *TsqlResultSetMappings `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping sql-result-set-mappings"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_ instance.
+func (me *XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.SqlResultSetMappings.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ struct {
+	Fields []*TattributeOverrideField `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping field"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_ instance.
+func (me *XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.Fields {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ struct {
+	ColumnResult *TcolumnResult `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping column-result"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_ instance.
+func (me *XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.ColumnResult.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type TinverseJoinColumns struct {
+	XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_
+}
+
+//	If the WalkHandlers.TinverseJoinColumns function is not nil (ie. was set by outside code), calls it with this TinverseJoinColumns instance as the single argument. Then calls the Walk() method on 1/1 embed(s) and 0/0 field(s) belonging to this TinverseJoinColumns instance.
+func (me *TinverseJoinColumns) Walk() (err error) {
+	if fn := WalkHandlers.TinverseJoinColumns; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ struct {
+	EntityListener *TentityListener `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping entity-listener"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_ instance.
+func (me *XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.EntityListener.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_ struct {
+	Generators []*Tgenerator `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping generator"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_ instance.
+func (me *XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.Generators {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ struct {
+	LifecycleCallbackses []*TlifecycleCallbacks `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping lifecycle-callbacks"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_ instance.
+func (me *XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.LifecycleCallbackses {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ struct {
+	InverseJoinColumnses []*TjoinColumns `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping inverse-join-columns"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_ instance.
+func (me *XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.InverseJoinColumnses {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ struct {
+	CascadeDetachs []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-detach"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_ instance.
+func (me *XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.CascadeDetachs {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ struct {
+	AssociationOverrides *TassociationOverrides `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping association-overrides"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_ instance.
+func (me *XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.AssociationOverrides.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_Optionsequenceoptionsschema_Option_Toption_ struct {
+	Option *Toption `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping option"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_Optionsequenceoptionsschema_Option_Toption_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Optionsequenceoptionsschema_Option_Toption_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Optionsequenceoptionsschema_Option_Toption_ instance.
+func (me *XsdGoPkgHasElem_Optionsequenceoptionsschema_Option_Toption_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_Optionsequenceoptionsschema_Option_Toption_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.Option.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_MappedSuperclasssequencedoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ struct {
+	MappedSuperclass *TmappedSuperclass `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping mapped-superclass"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_MappedSuperclasssequencedoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_MappedSuperclasssequencedoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_MappedSuperclasssequencedoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ instance.
+func (me *XsdGoPkgHasElem_MappedSuperclasssequencedoctrineMappingschema_MappedSuperclass_TmappedSuperclass_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_MappedSuperclasssequencedoctrineMappingschema_MappedSuperclass_TmappedSuperclass_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.MappedSuperclass.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_ struct {
+	Embedded *Tembedded `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping embedded"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_ instance.
+func (me *XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.Embedded.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ struct {
+	SqlResultSetMapping *TsqlResultSetMapping `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping sql-result-set-mapping"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_ instance.
+func (me *XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.SqlResultSetMapping.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ struct {
+	NamedNativeQuery *TnamedNativeQuery `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping named-native-query"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_ instance.
+func (me *XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.NamedNativeQuery.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ struct {
+	DiscriminatorMaps []*TdiscriminatorMap `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping discriminator-map"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_ instance.
+func (me *XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.DiscriminatorMaps {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ struct {
+	ManyToOne *TmanyToOne `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping many-to-one"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_ instance.
+func (me *XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.ManyToOne.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ struct {
+	CascadeMerges []*TemptyType `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping cascade-merge"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 0/1 field(s) belonging to this XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_ instance.
+func (me *XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		for _, x := range me.CascadeMerges {
+			if err = x.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
+type XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_ struct {
+	Id *Tid `xml:"http://doctrine-project.org/schemas/orm/doctrine-mapping id"`
+}
+
+//	If the WalkHandlers.XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_ function is not nil (ie. was set by outside code), calls it with this XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_ instance as the single argument. Then calls the Walk() method on 0/0 embed(s) and 1/1 field(s) belonging to this XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_ instance.
+func (me *XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_) Walk() (err error) {
+	if fn := WalkHandlers.XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_; me != nil {
+		if fn != nil {
+			if err = fn(me, true); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+		if err = me.Id.Walk(); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+			return
+		}
+		if fn != nil {
+			if err = fn(me, false); xsdt.OnWalkError(&err, &WalkErrors, WalkContinueOnError, WalkOnError) {
+				return
+			}
+		}
+	}
+	return
+}
+
 var (
 	//	Set this to false to break a Walk() immediately as soon as the first error is returned by a custom handler function.
 	//	If true, Walk() proceeds and accumulates all errors in the WalkErrors slice.
@@ -4956,171 +4956,171 @@ var (
 //	Provides 167 strong-typed hooks for your own custom handler functions to be invoked when the Walk() method is called on any instance of any (non-attribute-related) struct type defined in this package.
 //	If your custom handler does get called at all for a given struct instance, then it always gets called twice, first with the 'enter' bool argument set to true, then (after having Walk()ed all subordinate struct instances, if any) once again with it set to false.
 type XsdGoPkgWalkHandlers struct {
-	TsqlResultSetMapping                                                                                                  func(*TsqlResultSetMapping, bool) error
-	Tgenerator                                                                                                            func(*Tgenerator, bool) error
-	XsdGoPkgHasElems_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_                                              func(*XsdGoPkgHasElems_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_, bool) error
-	XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_                       func(*XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_, bool) error
-	XsdGoPkgHasElems_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_                          func(*XsdGoPkgHasElems_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_, bool) error
-	XsdGoPkgHasElem_JoinColumnchoicesequencemanyToOneschema_JoinColumn_TjoinColumn_                                       func(*XsdGoPkgHasElem_JoinColumnchoicesequencemanyToOneschema_JoinColumn_TjoinColumn_, bool) error
-	TdiscriminatorMap                                                                                                     func(*TdiscriminatorMap, bool) error
-	TnamedQueries                                                                                                         func(*TnamedQueries, bool) error
-	TsequenceGenerator                                                                                                    func(*TsequenceGenerator, bool) error
-	Tentity                                                                                                               func(*Tentity, bool) error
-	XsdGoPkgHasElems_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_                   func(*XsdGoPkgHasElems_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_, bool) error
-	XsdGoPkgHasElem_DoctrineMapping                                                                                       func(*XsdGoPkgHasElem_DoctrineMapping, bool) error
-	TinverseJoinColumns                                                                                                   func(*TinverseJoinColumns, bool) error
-	XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_                                                         func(*XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_, bool) error
-	XsdGoPkgHasElems_LifecycleCallbacksequenceentityListenerschema_LifecycleCallback_TlifecycleCallback_                  func(*XsdGoPkgHasElems_LifecycleCallbacksequenceentityListenerschema_LifecycleCallback_TlifecycleCallback_, bool) error
-	XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_                                                            func(*XsdGoPkgHasElem_CachesequencemanyToOneschema_Cache_Tcache_, bool) error
-	TuniqueConstraints                                                                                                    func(*TuniqueConstraints, bool) error
-	Tembedded                                                                                                             func(*Tembedded, bool) error
-	XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_                                                          func(*XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_, bool) error
-	XsdGoPkgHasElems_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_                 func(*XsdGoPkgHasElems_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_, bool) error
-	XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_               func(*XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_, bool) error
-	XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_                                     func(*XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_, bool) error
-	XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_                                                      func(*XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_, bool) error
-	XsdGoPkgHasElem_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_                            func(*XsdGoPkgHasElem_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_, bool) error
-	TentityListeners                                                                                                      func(*TentityListeners, bool) error
-	Tid                                                                                                                   func(*Tid, bool) error
-	XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_                        func(*XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_, bool) error
-	Toption                                                                                                               func(*Toption, bool) error
-	XsdGoPkgHasElem_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_                               func(*XsdGoPkgHasElem_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_, bool) error
-	TlifecycleCallbacks                                                                                                   func(*TlifecycleCallbacks, bool) error
-	XsdGoPkgHasElems_Idsequenceentityschema_Id_Tid_                                                                       func(*XsdGoPkgHasElems_Idsequenceentityschema_Id_Tid_, bool) error
-	XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_                                                      func(*XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_, bool) error
-	XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_                                                              func(*XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_, bool) error
-	XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_                                                           func(*XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_, bool) error
-	XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_                           func(*XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_, bool) error
-	XsdGoPkgHasElems_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ func(*XsdGoPkgHasElems_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_, bool) error
-	XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_                                         func(*XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_, bool) error
-	XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_                                                   func(*XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_, bool) error
-	XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_                    func(*XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_, bool) error
-	XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_                       func(*XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_, bool) error
-	XsdGoPkgHasElems_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_      func(*XsdGoPkgHasElems_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_, bool) error
 	XsdGoPkgHasElem_QuerysequencenamedNativeQueryschema_Query_XsdtString_                                                 func(*XsdGoPkgHasElem_QuerysequencenamedNativeQueryschema_Query_XsdtString_, bool) error
-	XsdGoPkgHasElem_Optionsequenceoptionschema_Option_Toption_                                                            func(*XsdGoPkgHasElem_Optionsequenceoptionschema_Option_Toption_, bool) error
-	ToneToMany                                                                                                            func(*ToneToMany, bool) error
-	TxsdDoctrineMapping                                                                                                   func(*TxsdDoctrineMapping, bool) error
-	XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_                       func(*XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_, bool) error
-	XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_                                                func(*XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_, bool) error
-	XsdGoPkgHasElems_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_                                           func(*XsdGoPkgHasElems_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_, bool) error
-	TattributeOverrideField                                                                                               func(*TattributeOverrideField, bool) error
-	XsdGoPkgHasElems_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_      func(*XsdGoPkgHasElems_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_, bool) error
-	XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_                                                     func(*XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_, bool) error
-	XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_                                                              func(*XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_, bool) error
-	XsdGoPkgHasElems_DoctrineMapping                                                                                      func(*XsdGoPkgHasElems_DoctrineMapping, bool) error
-	XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_                                                      func(*XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_, bool) error
-	TdiscriminatorColumn                                                                                                  func(*TdiscriminatorColumn, bool) error
-	Tcache                                                                                                                func(*Tcache, bool) error
-	XsdGoPkgHasElems_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_                 func(*XsdGoPkgHasElems_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_, bool) error
-	TentityResult                                                                                                         func(*TentityResult, bool) error
 	XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_                             func(*XsdGoPkgHasElems_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_, bool) error
-	XsdGoPkgHasElems_Indexessequenceentityschema_Indexes_Tindexes_                                                        func(*XsdGoPkgHasElems_Indexessequenceentityschema_Indexes_Tindexes_, bool) error
-	XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_                  func(*XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_, bool) error
-	TassociationOverrides                                                                                                 func(*TassociationOverrides, bool) error
-	TentityListener                                                                                                       func(*TentityListener, bool) error
-	TfieldResult                                                                                                          func(*TfieldResult, bool) error
-	XsdGoPkgHasElem_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_                        func(*XsdGoPkgHasElem_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_, bool) error
-	XsdGoPkgHasElem_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_  func(*XsdGoPkgHasElem_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_, bool) error
-	XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_                                   func(*XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_, bool) error
-	XsdGoPkgHasElem_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_                                               func(*XsdGoPkgHasElem_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_, bool) error
-	XsdGoPkgHasElems_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_                                               func(*XsdGoPkgHasElems_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_, bool) error
-	XsdGoPkgHasElem_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_                           func(*XsdGoPkgHasElem_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_, bool) error
-	XsdGoPkgHasElems_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_                      func(*XsdGoPkgHasElems_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_, bool) error
-	XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_       func(*XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_, bool) error
-	XsdGoPkgHasElems_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_                                      func(*XsdGoPkgHasElems_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_, bool) error
-	XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_                                                   func(*XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_, bool) error
-	TjoinColumn                                                                                                           func(*TjoinColumn, bool) error
-	XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_                                    func(*XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_, bool) error
-	XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_                                                func(*XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_, bool) error
-	XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_                   func(*XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_, bool) error
-	XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_                              func(*XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_, bool) error
-	XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_                     func(*XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_, bool) error
-	TmanyToOne                                                                                                            func(*TmanyToOne, bool) error
-	Tindexes                                                                                                              func(*Tindexes, bool) error
-	XsdGoPkgHasElems_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_                                        func(*XsdGoPkgHasElems_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_, bool) error
-	TinversedByOverride                                                                                                   func(*TinversedByOverride, bool) error
-	XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_              func(*XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_, bool) error
-	TattributeOverrides                                                                                                   func(*TattributeOverrides, bool) error
-	TcolumnResult                                                                                                         func(*TcolumnResult, bool) error
-	XsdGoPkgHasElems_CachesequenceoneToManyschema_Cache_Tcache_                                                           func(*XsdGoPkgHasElems_CachesequenceoneToManyschema_Cache_Tcache_, bool) error
-	XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_                                                               func(*XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_, bool) error
-	XsdGoPkgHasElems_CascadesequenceoneToManyschema_Cascade_TcascadeType_                                                 func(*XsdGoPkgHasElems_CascadesequenceoneToManyschema_Cascade_TcascadeType_, bool) error
 	XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_                                      func(*XsdGoPkgHasElem_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_, bool) error
-	XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_                              func(*XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_, bool) error
+	XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_                                      func(*XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_, bool) error
+	XsdGoPkgHasElems_Idsequenceentityschema_Id_Tid_                                                                       func(*XsdGoPkgHasElems_Idsequenceentityschema_Id_Tid_, bool) error
+	TxsdDoctrineMapping                                                                                                   func(*TxsdDoctrineMapping, bool) error
+	XsdGoPkgHasElems_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_                          func(*XsdGoPkgHasElems_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_, bool) error
+	TorderByField                                                                                                         func(*TorderByField, bool) error
+	TsqlResultSetMappings                                                                                                 func(*TsqlResultSetMappings, bool) error
+	XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_                                                          func(*XsdGoPkgHasElems_Optionsequenceoptionsschema_Option_Toption_, bool) error
+	XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_                                                  func(*XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_, bool) error
+	XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_                              func(*XsdGoPkgHasElems_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_, bool) error
+	XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_                        func(*XsdGoPkgHasElem_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_, bool) error
+	XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_                                  func(*XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_, bool) error
+	TassociationOverride                                                                                                  func(*TassociationOverride, bool) error
+	XsdGoPkgHasElem_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_                                               func(*XsdGoPkgHasElem_JoinTablesequencemanyToManyschema_JoinTable_TjoinTable_, bool) error
+	TinversedByOverride                                                                                                   func(*TinversedByOverride, bool) error
+	Tgenerator                                                                                                            func(*Tgenerator, bool) error
+	XsdGoPkgHasElem_Generatorsequenceidschema_Generator_Tgenerator_                                                       func(*XsdGoPkgHasElem_Generatorsequenceidschema_Generator_Tgenerator_, bool) error
+	Tfield                                                                                                                func(*Tfield, bool) error
+	TmanyToOne                                                                                                            func(*TmanyToOne, bool) error
 	Tindex                                                                                                                func(*Tindex, bool) error
-	XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_                                                             func(*XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_, bool) error
-	XsdGoPkgHasElems_EntitysequenceTxsdDoctrineMappingdoctrineMappingschema_Entity_Tentity_                               func(*XsdGoPkgHasElems_EntitysequenceTxsdDoctrineMappingdoctrineMappingschema_Entity_Tentity_, bool) error
+	Tcache                                                                                                                func(*Tcache, bool) error
 	XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_                       func(*XsdGoPkgHasElem_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_, bool) error
+	XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_                           func(*XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_, bool) error
+	XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_                                                   func(*XsdGoPkgHasElem_EntitysequencedoctrineMappingschema_Entity_Tentity_, bool) error
+	TuniqueConstraints                                                                                                    func(*TuniqueConstraints, bool) error
+	TattributeOverride                                                                                                    func(*TattributeOverride, bool) error
 	XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_                                     func(*XsdGoPkgHasElems_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_, bool) error
-	TcascadeType                                                                                                          func(*TcascadeType, bool) error
-	XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_                                                  func(*XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_, bool) error
-	TorderBy                                                                                                              func(*TorderBy, bool) error
-	TnamedQuery                                                                                                           func(*TnamedQuery, bool) error
-	XsdGoPkgHasElems_JoinColumnssequenceassociationOverrideschema_JoinColumns_TjoinColumns_                               func(*XsdGoPkgHasElems_JoinColumnssequenceassociationOverrideschema_JoinColumns_TjoinColumns_, bool) error
-	TemptyType                                                                                                            func(*TemptyType, bool) error
-	XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_                                            func(*XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_, bool) error
-	TlifecycleCallback                                                                                                    func(*TlifecycleCallback, bool) error
-	XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_                                 func(*XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_, bool) error
 	XsdGoPkgHasElems_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_                      func(*XsdGoPkgHasElems_EntityResultchoicesequencesqlResultSetMappingschema_EntityResult_TentityResult_, bool) error
 	TnamedNativeQuery                                                                                                     func(*TnamedNativeQuery, bool) error
-	XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_                                   func(*XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_, bool) error
-	Toptions                                                                                                              func(*Toptions, bool) error
-	TassociationOverride                                                                                                  func(*TassociationOverride, bool) error
-	XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_                                        func(*XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_, bool) error
-	XsdGoPkgHasElem_OrderBysequenceoneToManyschema_OrderBy_TorderBy_                                                      func(*XsdGoPkgHasElem_OrderBysequenceoneToManyschema_OrderBy_TorderBy_, bool) error
-	TjoinColumns                                                                                                          func(*TjoinColumns, bool) error
-	XsdGoPkgHasElem_Generatorsequenceidschema_Generator_Tgenerator_                                                       func(*XsdGoPkgHasElem_Generatorsequenceidschema_Generator_Tgenerator_, bool) error
-	XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_       func(*XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_, bool) error
-	XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_                                         func(*XsdGoPkgHasElem_OptionssequenceattributeOverrideFieldschema_Options_Toptions_, bool) error
-	TattributeOverride                                                                                                    func(*TattributeOverride, bool) error
-	XsdGoPkgHasElem_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_                        func(*XsdGoPkgHasElem_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_, bool) error
-	XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_                  func(*XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_, bool) error
-	XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_                           func(*XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_, bool) error
-	XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_                           func(*XsdGoPkgHasElem_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_, bool) error
-	XsdGoPkgHasElems_OrderBysequenceoneToManyschema_OrderBy_TorderBy_                                                     func(*XsdGoPkgHasElems_OrderBysequenceoneToManyschema_OrderBy_TorderBy_, bool) error
 	XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_                                                     func(*XsdGoPkgHasElems_Embeddedsequenceentityschema_Embedded_Tembedded_, bool) error
-	XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_                                                  func(*XsdGoPkgHasElems_OneToManysequenceentityschema_OneToMany_ToneToMany_, bool) error
-	XsdGoPkgHasElems_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_                          func(*XsdGoPkgHasElems_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_, bool) error
-	TnamedNativeQueries                                                                                                   func(*TnamedNativeQueries, bool) error
-	XsdGoPkgHasElems_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_                                func(*XsdGoPkgHasElems_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_, bool) error
-	XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_                          func(*XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_, bool) error
-	XsdGoPkgHasElems_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_                                         func(*XsdGoPkgHasElems_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_, bool) error
-	XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_                                          func(*XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_, bool) error
-	XsdGoPkgHasElems_OptionssequenceattributeOverrideFieldschema_Options_Toptions_                                        func(*XsdGoPkgHasElems_OptionssequenceattributeOverrideFieldschema_Options_Toptions_, bool) error
-	XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_                                                  func(*XsdGoPkgHasElem_CascadesequencemanyToOneschema_Cascade_TcascadeType_, bool) error
-	TdiscriminatorMapping                                                                                                 func(*TdiscriminatorMapping, bool) error
-	Tembeddable                                                                                                           func(*Tembeddable, bool) error
-	XsdGoPkgHasElem_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_                    func(*XsdGoPkgHasElem_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_, bool) error
-	XsdGoPkgHasElem_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_       func(*XsdGoPkgHasElem_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_, bool) error
-	XsdGoPkgHasCdata                                                                                                      func(*XsdGoPkgHasCdata, bool) error
-	XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_                                      func(*XsdGoPkgHasElem_CascadeDetachsequencecascadeTypeschema_CascadeDetach_TemptyType_, bool) error
-	XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_                                    func(*XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_, bool) error
-	TuniqueConstraint                                                                                                     func(*TuniqueConstraint, bool) error
-	XsdGoPkgHasElem_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_                               func(*XsdGoPkgHasElem_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_, bool) error
-	XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_                                                   func(*XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_, bool) error
-	XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_                              func(*XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_, bool) error
-	XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_        func(*XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_, bool) error
+	ToneToOne                                                                                                             func(*ToneToOne, bool) error
+	XsdGoPkgHasElems_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_                   func(*XsdGoPkgHasElems_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_, bool) error
+	XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_                  func(*XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_, bool) error
 	XsdGoPkgHasElem_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_                                          func(*XsdGoPkgHasElem_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_, bool) error
-	Tfield                                                                                                                func(*Tfield, bool) error
-	XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_                                          func(*XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_, bool) error
-	TjoinTable                                                                                                            func(*TjoinTable, bool) error
-	TmanyToMany                                                                                                           func(*TmanyToMany, bool) error
-	TsqlResultSetMappings                                                                                                 func(*TsqlResultSetMappings, bool) error
+	XsdGoPkgHasElems_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_ func(*XsdGoPkgHasElems_MappedSuperclasssequenceTxsdDoctrineMappingdoctrineMappingschema_MappedSuperclass_TmappedSuperclass_, bool) error
+	XsdGoPkgHasElem_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_       func(*XsdGoPkgHasElem_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_, bool) error
+	XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_                    func(*XsdGoPkgHasElems_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_, bool) error
+	XsdGoPkgHasElems_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_                          func(*XsdGoPkgHasElems_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_, bool) error
+	ToneToMany                                                                                                            func(*ToneToMany, bool) error
 	XsdGoPkgHasElems_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_                 func(*XsdGoPkgHasElems_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_, bool) error
-	TcustomIdGenerator                                                                                                    func(*TcustomIdGenerator, bool) error
+	Tembeddable                                                                                                           func(*Tembeddable, bool) error
+	XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_                                                func(*XsdGoPkgHasElems_QuerysequencenamedNativeQueryschema_Query_XsdtString_, bool) error
+	XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_                       func(*XsdGoPkgHasElem_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_, bool) error
+	TmanyToMany                                                                                                           func(*TmanyToMany, bool) error
+	XsdGoPkgHasElems_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_                                               func(*XsdGoPkgHasElems_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_, bool) error
+	TfieldResult                                                                                                          func(*TfieldResult, bool) error
+	TlifecycleCallbacks                                                                                                   func(*TlifecycleCallbacks, bool) error
+	XsdGoPkgHasElem_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_                        func(*XsdGoPkgHasElem_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_, bool) error
+	XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_                                 func(*XsdGoPkgHasElem_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_, bool) error
+	XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_                                       func(*XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_, bool) error
+	XsdGoPkgHasElems_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_                                           func(*XsdGoPkgHasElems_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_, bool) error
+	XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_                                        func(*XsdGoPkgHasElem_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_, bool) error
+	XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_                       func(*XsdGoPkgHasElems_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_, bool) error
+	XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_                           func(*XsdGoPkgHasElems_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_, bool) error
+	XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_                                   func(*XsdGoPkgHasElems_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_, bool) error
+	TemptyType                                                                                                            func(*TemptyType, bool) error
+	XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_                                                             func(*XsdGoPkgHasElems_Indexsequenceindexesschema_Index_Tindex_, bool) error
+	XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_              func(*XsdGoPkgHasElems_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_, bool) error
+	XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_                                                   func(*XsdGoPkgHasElem_OneToManysequenceentityschema_OneToMany_ToneToMany_, bool) error
+	XsdGoPkgHasElems_Indexessequenceentityschema_Indexes_Tindexes_                                                        func(*XsdGoPkgHasElems_Indexessequenceentityschema_Indexes_Tindexes_, bool) error
+	XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_                                                           func(*XsdGoPkgHasElem_CachesequencemanyToManyschema_Cache_Tcache_, bool) error
+	TcascadeType                                                                                                          func(*TcascadeType, bool) error
+	XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_                                                 func(*XsdGoPkgHasElem_CascadesequencemanyToManyschema_Cascade_TcascadeType_, bool) error
+	XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_                                          func(*XsdGoPkgHasElem_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_, bool) error
+	XsdGoPkgHasElems_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_      func(*XsdGoPkgHasElems_AssociationOverridesequenceassociationOverridesschema_AssociationOverride_TassociationOverride_, bool) error
+	XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_                           func(*XsdGoPkgHasElem_UniqueConstraintssequenceentityschema_UniqueConstraints_TuniqueConstraints_, bool) error
+	XsdGoPkgHasElems_CachesequencemanyToOneschema_Cache_Tcache_                                                           func(*XsdGoPkgHasElems_CachesequencemanyToOneschema_Cache_Tcache_, bool) error
+	XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_                                   func(*XsdGoPkgHasElems_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_, bool) error
+	XsdGoPkgHasElems_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_                                        func(*XsdGoPkgHasElems_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_, bool) error
+	XsdGoPkgHasElems_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_                 func(*XsdGoPkgHasElems_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_, bool) error
+	XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_                  func(*XsdGoPkgHasElems_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_, bool) error
+	XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_                              func(*XsdGoPkgHasElem_DiscriminatorMapsequenceentityschema_DiscriminatorMap_TdiscriminatorMap_, bool) error
+	XsdGoPkgHasElems_Optionssequenceidschema_Options_Toptions_                                                            func(*XsdGoPkgHasElems_Optionssequenceidschema_Options_Toptions_, bool) error
+	XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_                                                      func(*XsdGoPkgHasElem_OneToOnesequenceentityschema_OneToOne_ToneToOne_, bool) error
+	XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_                                     func(*XsdGoPkgHasElems_CascadeRemovesequencecascadeTypeschema_CascadeRemove_TemptyType_, bool) error
+	XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_                                                   func(*XsdGoPkgHasElem_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_, bool) error
+	XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_                                            func(*XsdGoPkgHasElem_CascadeAllsequencecascadeTypeschema_CascadeAll_TemptyType_, bool) error
+	XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_                                                              func(*XsdGoPkgHasElems_Fieldsequenceentityschema_Field_Tfield_, bool) error
+	TmappedSuperclass                                                                                                     func(*TmappedSuperclass, bool) error
+	XsdGoPkgHasElem_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_                        func(*XsdGoPkgHasElem_LifecycleCallbackssequenceentityschema_LifecycleCallbacks_TlifecycleCallbacks_, bool) error
+	TentityResult                                                                                                         func(*TentityResult, bool) error
+	XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_                                                  func(*XsdGoPkgHasElems_ManyToOnesequenceentityschema_ManyToOne_TmanyToOne_, bool) error
+	XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_                                                func(*XsdGoPkgHasElem_ManyToManysequenceentityschema_ManyToMany_TmanyToMany_, bool) error
+	XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_                                       func(*XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_, bool) error
+	XsdGoPkgHasElem_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_                           func(*XsdGoPkgHasElem_InversedBysequenceassociationOverrideschema_InversedBy_TinversedByOverride_, bool) error
+	TentityListener                                                                                                       func(*TentityListener, bool) error
+	Tentity                                                                                                               func(*Tentity, bool) error
+	XsdGoPkgHasElems_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_                                func(*XsdGoPkgHasElems_EntityListenerssequenceentityschema_EntityListeners_TentityListeners_, bool) error
+	XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_                   func(*XsdGoPkgHasElem_UniqueConstraintsequenceuniqueConstraintsschema_UniqueConstraint_TuniqueConstraint_, bool) error
+	XsdGoPkgHasElems_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_                                         func(*XsdGoPkgHasElems_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_, bool) error
+	XsdGoPkgHasElems_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_                      func(*XsdGoPkgHasElems_ColumnResultchoicesequencesqlResultSetMappingschema_ColumnResult_TcolumnResult_, bool) error
+	TdiscriminatorColumn                                                                                                  func(*TdiscriminatorColumn, bool) error
+	XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_                       func(*XsdGoPkgHasElems_NamedNativeQueriessequenceentityschema_NamedNativeQueries_TnamedNativeQueries_, bool) error
+	XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_               func(*XsdGoPkgHasElem_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_, bool) error
+	TinverseJoinColumns                                                                                                   func(*TinverseJoinColumns, bool) error
+	XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_                                                     func(*XsdGoPkgHasElem_OrderBysequencemanyToManyschema_OrderBy_TorderBy_, bool) error
+	XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_       func(*XsdGoPkgHasElems_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_, bool) error
+	TdiscriminatorMap                                                                                                     func(*TdiscriminatorMap, bool) error
+	Tindexes                                                                                                              func(*Tindexes, bool) error
 	XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_                                   func(*XsdGoPkgHasElem_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_, bool) error
 	XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_                       func(*XsdGoPkgHasElems_AttributeOverridessequenceentityschema_AttributeOverrides_TattributeOverrides_, bool) error
-	XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_                                  func(*XsdGoPkgHasElems_FieldsequenceattributeOverrideschema_Field_TattributeOverrideField_, bool) error
-	XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_                                       func(*XsdGoPkgHasElem_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_, bool) error
-	XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_               func(*XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_, bool) error
-	TmappedSuperclass                                                                                                     func(*TmappedSuperclass, bool) error
-	XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_                  func(*XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_, bool) error
-	XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_                  func(*XsdGoPkgHasElem_AssociationOverridessequenceentityschema_AssociationOverrides_TassociationOverrides_, bool) error
-	XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_                                         func(*XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_, bool) error
-	XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_                                    func(*XsdGoPkgHasElem_JoinColumnschoicesequencemanyToOneschema_JoinColumns_TjoinColumns_, bool) error
-	TorderByField                                                                                                         func(*TorderByField, bool) error
-	XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_                                       func(*XsdGoPkgHasElems_CascadeMergesequencecascadeTypeschema_CascadeMerge_TemptyType_, bool) error
-	ToneToOne                                                                                                             func(*ToneToOne, bool) error
+	Tembedded                                                                                                             func(*Tembedded, bool) error
+	TuniqueConstraint                                                                                                     func(*TuniqueConstraint, bool) error
+	TcolumnResult                                                                                                         func(*TcolumnResult, bool) error
+	XsdGoPkgHasElems_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_                 func(*XsdGoPkgHasElems_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_, bool) error
+	TdiscriminatorMapping                                                                                                 func(*TdiscriminatorMapping, bool) error
+	XsdGoPkgHasElems_OrderBysequencemanyToManyschema_OrderBy_TorderBy_                                                    func(*XsdGoPkgHasElems_OrderBysequencemanyToManyschema_OrderBy_TorderBy_, bool) error
+	TjoinTable                                                                                                            func(*TjoinTable, bool) error
+	TnamedQuery                                                                                                           func(*TnamedQuery, bool) error
+	XsdGoPkgHasElem_Optionsequenceoptionsschema_Option_Toption_                                                           func(*XsdGoPkgHasElem_Optionsequenceoptionsschema_Option_Toption_, bool) error
+	XsdGoPkgHasElem_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_                            func(*XsdGoPkgHasElem_InverseJoinColumnssequencejoinTableschema_InverseJoinColumns_TjoinColumns_, bool) error
+	TcustomIdGenerator                                                                                                    func(*TcustomIdGenerator, bool) error
+	XsdGoPkgHasElems_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_                                         func(*XsdGoPkgHasElems_JoinColumnssequencejoinTableschema_JoinColumns_TjoinColumns_, bool) error
+	Toptions                                                                                                              func(*Toptions, bool) error
+	XsdGoPkgHasElems_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_      func(*XsdGoPkgHasElems_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_, bool) error
+	XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_                                                           func(*XsdGoPkgHasElems_Optionsequenceoptionschema_Option_Toption_, bool) error
+	XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_                                                      func(*XsdGoPkgHasElems_Generatorsequenceidschema_Generator_Tgenerator_, bool) error
+	TjoinColumn                                                                                                           func(*TjoinColumn, bool) error
+	TsqlResultSetMapping                                                                                                  func(*TsqlResultSetMapping, bool) error
+	XsdGoPkgHasCdata                                                                                                      func(*XsdGoPkgHasCdata, bool) error
+	TattributeOverrides                                                                                                   func(*TattributeOverrides, bool) error
+	XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_                                    func(*XsdGoPkgHasElem_CascadeRefreshsequencecascadeTypeschema_CascadeRefresh_TemptyType_, bool) error
+	XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_                                                     func(*XsdGoPkgHasElems_OneToOnesequenceentityschema_OneToOne_ToneToOne_, bool) error
+	XsdGoPkgHasElems_DoctrineMapping                                                                                      func(*XsdGoPkgHasElems_DoctrineMapping, bool) error
+	XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_                  func(*XsdGoPkgHasElem_NamedNativeQuerysequencenamedNativeQueriesschema_NamedNativeQuery_TnamedNativeQuery_, bool) error
+	TnamedNativeQueries                                                                                                   func(*TnamedNativeQueries, bool) error
+	XsdGoPkgHasElems_CascadesequenceoneToOneschema_Cascade_TcascadeType_                                                  func(*XsdGoPkgHasElems_CascadesequenceoneToOneschema_Cascade_TcascadeType_, bool) error
+	XsdGoPkgHasElem_DoctrineMapping                                                                                       func(*XsdGoPkgHasElem_DoctrineMapping, bool) error
+	TjoinColumns                                                                                                          func(*TjoinColumns, bool) error
+	Toption                                                                                                               func(*Toption, bool) error
+	TsequenceGenerator                                                                                                    func(*TsequenceGenerator, bool) error
+	XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_        func(*XsdGoPkgHasElem_DiscriminatorMappingsequencediscriminatorMapschema_DiscriminatorMapping_TdiscriminatorMapping_, bool) error
 	XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_                                                                        func(*XsdGoPkgHasElem_Idsequenceentityschema_Id_Tid_, bool) error
+	TorderBy                                                                                                              func(*TorderBy, bool) error
+	XsdGoPkgHasElems_EntitysequenceTxsdDoctrineMappingdoctrineMappingschema_Entity_Tentity_                               func(*XsdGoPkgHasElems_EntitysequenceTxsdDoctrineMappingdoctrineMappingschema_Entity_Tentity_, bool) error
+	XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_                                         func(*XsdGoPkgHasElems_NamedQueriessequenceentityschema_NamedQueries_TnamedQueries_, bool) error
+	XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_                                                      func(*XsdGoPkgHasElem_Embeddedsequenceentityschema_Embedded_Tembedded_, bool) error
+	Tid                                                                                                                   func(*Tid, bool) error
+	XsdGoPkgHasElems_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_                                      func(*XsdGoPkgHasElems_FieldResultsequenceentityResultschema_FieldResult_TfieldResult_, bool) error
+	XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_                                               func(*XsdGoPkgHasElem_OptionssequenceuniqueConstraintschema_Options_Toptions_, bool) error
+	XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_                     func(*XsdGoPkgHasElem_DiscriminatorColumnsequenceentityschema_DiscriminatorColumn_TdiscriminatorColumn_, bool) error
+	XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_               func(*XsdGoPkgHasElem_AttributeOverridesequenceattributeOverridesschema_AttributeOverride_TattributeOverride_, bool) error
+	XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_                                         func(*XsdGoPkgHasElem_OrderByFieldsequenceorderByschema_OrderByField_TorderByField_, bool) error
+	XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_                                                              func(*XsdGoPkgHasElem_Indexsequenceindexesschema_Index_Tindex_, bool) error
+	XsdGoPkgHasElem_MappedSuperclasssequencedoctrineMappingschema_MappedSuperclass_TmappedSuperclass_                     func(*XsdGoPkgHasElem_MappedSuperclasssequencedoctrineMappingschema_MappedSuperclass_TmappedSuperclass_, bool) error
+	XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_                                          func(*XsdGoPkgHasElems_JoinColumnsequencejoinColumnsschema_JoinColumn_TjoinColumn_, bool) error
+	XsdGoPkgHasElem_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_                               func(*XsdGoPkgHasElem_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_, bool) error
+	XsdGoPkgHasElem_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_                               func(*XsdGoPkgHasElem_CustomIdGeneratorsequenceidschema_CustomIdGenerator_TcustomIdGenerator_, bool) error
+	TattributeOverrideField                                                                                               func(*TattributeOverrideField, bool) error
+	XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_                                                               func(*XsdGoPkgHasElem_Fieldsequenceentityschema_Field_Tfield_, bool) error
+	XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_       func(*XsdGoPkgHasElem_SqlResultSetMappingsequencesqlResultSetMappingsschema_SqlResultSetMapping_TsqlResultSetMapping_, bool) error
+	XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_              func(*XsdGoPkgHasElems_LifecycleCallbacksequencelifecycleCallbacksschema_LifecycleCallback_TlifecycleCallback_, bool) error
+	TnamedQueries                                                                                                         func(*TnamedQueries, bool) error
+	TlifecycleCallback                                                                                                    func(*TlifecycleCallback, bool) error
+	XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_                          func(*XsdGoPkgHasElems_EntityListenersequenceentityListenersschema_EntityListener_TentityListener_, bool) error
+	TentityListeners                                                                                                      func(*TentityListeners, bool) error
+	XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_                                                         func(*XsdGoPkgHasElem_Indexessequenceentityschema_Indexes_Tindexes_, bool) error
+	XsdGoPkgHasElem_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_                    func(*XsdGoPkgHasElem_EmbeddablesequenceTxsdDoctrineMappingdoctrineMappingschema_Embeddable_Tembeddable_, bool) error
+	XsdGoPkgHasElems_JoinTablesequenceassociationOverrideschema_JoinTable_TjoinTable_                                     func(*XsdGoPkgHasElems_JoinTablesequenceassociationOverrideschema_JoinTable_TjoinTable_, bool) error
+	TassociationOverrides                                                                                                 func(*TassociationOverrides, bool) error
+	XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_                                          func(*XsdGoPkgHasElem_NamedQuerysequencenamedQueriesschema_NamedQuery_TnamedQuery_, bool) error
+	XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_                                        func(*XsdGoPkgHasElem_JoinColumnchoicesequenceoneToOneschema_JoinColumn_TjoinColumn_, bool) error
+	XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_                              func(*XsdGoPkgHasElems_SequenceGeneratorsequenceidschema_SequenceGenerator_TsequenceGenerator_, bool) error
+	XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_                  func(*XsdGoPkgHasElem_SqlResultSetMappingssequenceentityschema_SqlResultSetMappings_TsqlResultSetMappings_, bool) error
+	XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_                                    func(*XsdGoPkgHasElem_CascadePersistsequencecascadeTypeschema_CascadePersist_TemptyType_, bool) error
 }
